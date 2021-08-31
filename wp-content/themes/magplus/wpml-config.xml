@@ -1,0 +1,50 @@
+<wpml-config>
+  <admin-texts>
+    <key name="magplus_theme_options">
+      <key name="footer-copyright-text" />
+      <key name="translation-pages" />
+      <key name="translation-tags" />
+      <key name="translation-search-article" />
+      <key name="translation-search-products" />
+      <key name="translation-cart" />
+      <key name="translation-qty" />
+      <key name="translation-zero-view" />
+      <key name="translation-one-view" />
+      <key name="translation-views" />
+      <key name="translation-zero-comment" />
+      <key name="translation-one-comment" />
+      <key name="translation-comments" />
+      <key name="translation-downloads" />
+      <key name="translation-download-now" />
+      <key name="translation-ago" />
+      <key name="translation-loading" />
+      <key name="translation-load-more" />
+      <key name="translation-show-more" />
+      <key name="translation-search-results-for" />
+      <key name="translation-share" />
+      <key name="translation-you-might-also-like" />
+      <key name="translation-related-stories" />
+      <key name="translation-previous-article" />
+      <key name="translation-next-article" />
+      <key name="translation-next-up" />
+      <key name="translation-type-to-search" />
+      <key name="translation-latest-news" />
+      <key name="translation-breaking-news" />
+      <key name="translation-trending" />
+      <key name="translation-first-name" />
+      <key name="translation-email-address" />
+      <key name="translation-subscribe-now" />
+      <key name="translation-summary" />
+      <key name="translation-total-rating" />
+      <key name="translation-leave-comment" />
+      <key name="translation-cancel-comment" />
+      <key name="translation-post-comment" />
+      <key name="translation-your-comment" />
+      <key name="translation-name" />
+      <key name="translation-email" />
+      <key name="translation-website" />
+      <key name="translation-404" />
+      <key name="translation-back-to-home" />
+    </key>
+  </admin-texts>
+</wpml-config>

@@ -1,0 +1,143 @@
+.elem_icon {
+  width: 60px;
+  height: 45px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.elementor-navigator__element__element-type .elem_icon {
+  display: none;
+}
+
+.vc_tab_icon {
+  background-image: url('../img/_0000_Tab.png');
+}
+
+.vc_image_block_icon {
+  background-image: url('../img/_0001_Image-Block.png');
+}
+
+.vc_image_slider_icon {
+  background-image: url('../img/_0002_Slider.png');
+}
+
+.vc_image_category_icon {
+  background-image: url('../img/_0003_Category.png');
+}
+
+.vc_image_post_video_playlist_icon {
+  background-image: url('../img/_0004_Post-Video-Playlist.png');
+}
+
+.vc_image_youtube_video_playlist_icon {
+  background-image: url('../img/_0005_Youtube-Video-Playlist.png');
+}
+
+.vc_image_featured_blog_icon {
+  background-image: url('../img/_0006_Featured-Blog-News.png');
+}
+
+.vc_image_rating_icon {
+  background-image: url('../img/_0007_Rating.png');
+}
+
+.vc_image_heading_icon {
+  background-image: url('../img/_0008_heading.png');
+}
+
+.vc_image_post_grid_series_icon {
+  background-image: url('../img/_0009_Post-Grid-series.png');
+}
+
+.vc_image_weekly_top_5_icon {
+  background-image: url('../img/_0010_Weekly-Top-5.png');
+}
+
+.vc_image_weekly_top_7_icon {
+  background-image: url('../img/_0011_Weekly-top-7.png');
+}
+
+.vc_image_recent_news_icon {
+  background-image: url('../img/_0012_Recent-News.png');
+}
+
+.vc_image_post_movie_icon {
+  background-image: url('../img/_0013_Post-Movie.png');
+}
+
+.vc_image_post_grid_icon {
+  background-image: url('../img/_0014_Post-Grid.png');
+}
+
+.vc_image_post_card_icon {
+  background-image: url('../img/_0015_Post-Card.png');
+}
+
+.vc_image_hand_picked_icon {
+  background-image: url('../img/_0016_Hand-Picked-Blog.png');
+}
+
+.vc_image_blog_masonry_icon {
+  background-image: url('../img/_0017_Blog-Masonry.png');
+}
+
+.vc_image_divider_icon {
+  background-image: url('../img/_0000_Divider.png');
+}
+
+.vc_image_space_icon {
+  background-image: url('../img/_0001_Space.png');
+}
+
+.vc_image_special_text_icon {
+  background-image: url('../img/_0002_Special-Text.png');
+}
+
+.vc_image_contact_icon {
+  background-image: url('../img/_0003_Contact.png');
+}
+
+.vc_image_newsletter_icon {
+  background-image: url('../img/_0004_Newsletter.png');
+}
+
+.vc_image_soundcloud_icon {
+  background-image: url('../img/_0005_Soundcloud.png');
+}
+
+.vc_image_video_icon {
+  background-image: url('../img/_0006_Video.png');
+}
+
+.vc_image_gif_icon {
+  background-image: url('../img/_0007_Gif.png');
+}
+
+.vc_image_gallery_icon {
+  background-image: url('../img/_0008_Gallery.png');
+}
+
+.vc_image_custom_ads_icon {
+  background-image: url('../img/_0009_Custom-Ad.png');
+}
+
+.vc_image_blockquote_icon {
+  background-image: url('../img/_0010_Blockquote.png');
+}
+
+.vc_image_button {
+  background-image: url('../img/_0018_Button.png');
+}
+
+.vc_image_about_icon {
+  background-image: url('../img/_0011_About.png');
+}
+
+.vc_image_text_icon {
+  background-image: url('../img/_0012_Text.png');
+}
+
+.vc_image_post_gallery_video_icon {
+  background-image: url('../img/_0013_Post-Gallery-Video.png');
+}
