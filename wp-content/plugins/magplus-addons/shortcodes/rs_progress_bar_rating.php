@@ -8,9 +8,9 @@
  *
  */
 function rs_progress_bar_rating( $atts, $content = '', $id = '' ) {
-  
+
   global $rs_progress_bar_rating;
-  $rating_total           = '';
+  $rating_total           = 0;
   $rs_progress_bar_rating = array();
 
   extract( shortcode_atts( array(
@@ -57,19 +57,19 @@ function rs_progress_bar_rating( $atts, $content = '', $id = '' ) {
 
   $output .= '<div class="tt-rating-content">';
 
-  $output .= '<div class="row">';  
+  $output .= '<div class="row">';
 
 
-  $output .= '<div class="col-md-10 col-xs-12">';  
+  $output .= '<div class="col-md-10 col-xs-12">';
   $output .= '<div class="tt-summary-title"><h4 class="c-h5">'.esc_html__('Summary', 'magplus-pro-addons').'</h4></div><div class="empty-space marg-lg-b5"></div>';
   $output .= '<div class="tt-summary-text simple-text"><p>'.wp_kses_post($summary_text).'</p></div>';
   $output .=  '</div>';
 
   $output .= '<div class="col-md-2 text-right col-xs-12">';
-  $output .= '<div class="empty-space marg-xs-b15"></div>';  
+  $output .= '<div class="empty-space marg-xs-b15"></div>';
   $output .= '<div class="tt-rating-title"><h4 class="c-h5">'.esc_html__('Total Rating', 'magplus-pro-addons').'</h4></div><div class="empty-space marg-lg-b10"></div>';
-  $output .=  '<div class="tt-rating-text">'.number_format(($rating_total / $count), 1).'</div>'; 
-  $output .=  '</div>';  
+  $output .=  '<div class="tt-rating-text">'.number_format(($rating_total / $count), 1).'</div>';
+  $output .=  '</div>';
 
   $output .=  '</div>';
   $output .=  '</div>';
