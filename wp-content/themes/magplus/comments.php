@@ -91,13 +91,13 @@
             'url' => '
               <input type="text" name="url" id="website" placeholder="'.magplus_get_opt( 'translation-website').'" class="c-input placeholder" maxlength="100"></div></div>',
              'cookies' => '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
-            '<label for="wp-comment-cookies-consent">' . esc_html__( 'Save my name, email, and website in this browser for the next time I comment.', 'magplus' ) . '</label></p></div>'
+            '<label for="wp-comment-cookies-consent">' . esc_html__( 'Speicher meinen Namen, E-Mail, und Webseite in diesem Browser für das nächste Mal.', 'magplus' ) . '</label></p></div>'
           )
         )
       );
       comment_form($args);
     ?>
-  
+
 
   </div>
   <!-- End Add Comment -->

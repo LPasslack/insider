@@ -59,7 +59,7 @@
   top: 20px;
   padding: 7px 14px;
   color: #fff;
-  background-color: #111;
+  background-color: #111111;
   -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 2px 3px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15) inset, 0 2px 3px rgba(0, 0, 0, 0.05);
 }
@@ -180,8 +180,8 @@
 .woocommerce .button:hover,
 .woocommerce-page .button:hover,
 .woocommerce-page .button:hover {
-  color: #111;
-  /*color: #111;*/
+  color: #111111;
+  /*color: #111111;*/
   text-decoration: none;
 }
 
@@ -197,7 +197,7 @@
 .woocommerce-page .wc-proceed-to-checkout .button {
   font-size: 12px;
   padding: 8px 16px;
-  background: #111;
+  background: #111111;
   line-height: 1.4;
 }
 
@@ -571,13 +571,13 @@
 
 .woocommerce .shop_table td a,
 .woocommerce-page .shop_table td a {
-  color: #111;
+  color: #111111;
   font-weight: 700;
 }
 
 .woocommerce-page .shop_table th {
   padding: 12px;
-  color: #111;
+  color: #111111;
 }
 
 .woocommerce .shop_table .product-remove,
@@ -673,13 +673,13 @@
 .woocommerce .shop_table .button[name="update_cart"],
 .woocommerce-page .shop_table .button[name="update_cart"] {
   float: right;
-  background-color: #111;
+  background-color: #111111;
 }
 
 .woocommerce .shop_table .button[name="apply_coupon"],
 .woocommerce-page .shop_table .button[name="apply_coupon"],
 .single_add_to_cart_button {
-  background-color: #111 !important;
+  background-color: #111111 !important;
 }
 
 .woocommerce .shop_table .order-actions a,
@@ -902,7 +902,7 @@
 .woocommerce-page .entry-summary h1 {
   font-size: 24px;
   font-weight: 600;
-  color: #111;
+  color: #111111;
   margin-bottom: 15px;
 }
 
@@ -1070,7 +1070,7 @@
   text-align: right;
   margin-bottom: 10px;
   font-weight: bold;
-  color: #111;
+  color: #111111;
 }
 
 .woocommerce .product .cart_totals table td,
@@ -1417,7 +1417,7 @@ span.product-title {
 }
 
 .widget_shopping_cart .buttons .checkout {
-  background-color: #111;
+  background-color: #111111;
 }
 
 .widget_shopping_cart .buttons .checkout:hover {
@@ -1465,8 +1465,8 @@ span.product-title {
   z-index: 2;
   outline: none;
   cursor: pointer;
-  border: 1px solid #111;
-  background-color: #111;
+  border: 1px solid #111111;
+  background-color: #111111;
   -moz-border-radius: 1em;
   -webkit-border-radius: 1em;
   border-radius: 1em;
@@ -1609,7 +1609,7 @@ span.product-title {
 }
 
 .tt-module-woominicart .buttons .checkout {
-  background-color: #111;
+  background-color: #111111;
 }
 
 .tt-module-woominicart .buttons .checkout:hover {
@@ -1656,7 +1656,7 @@ span.product-title {
 
 .woocommerce-loop-product__title a {
   font-weight: 700;
-  color: #111;
+  color: #111111;
   line-height: 20px;
   font-size: 16px;
 }
@@ -1674,7 +1674,7 @@ span.product-title {
 .cross-sells h2 {
   font-size: 14px;
   margin-bottom: 8px;
-  color: #111;
+  color: #111111;
   font-weight: 700;
 }
 
@@ -1809,7 +1809,7 @@ span.product-title {
 .ajax_add_to_cart.c-btn.type-2,
 .added_to_cart.wc-forward,
 .product_type_variable.add_to_cart_button.c-btn.type-2 {
-  background: #111;
+  background: #111111;
   border: 0 none;
   color: #fff;
   font-size: 12px !important;
@@ -1831,7 +1831,7 @@ span.product-title {
 .added_to_cart.wc-forward {
   background: #fff;
   margin-top: 10px;
-  color: #111;
+  color: #111111;
   font-weight: 700;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -1948,7 +1948,7 @@ span.product-title {
 .woocommerce-tabs p,
 .woocommerce-product-details__short-description p {
   font-size: 13px;
-  color:#666;
+  color: #666666;
   line-height: 21px;
 }
 
@@ -1983,7 +1983,7 @@ span.product-title {
 
 .woocommerce-tabs.tt-tab-wrapper.type-1 .tt-nav-tab-item.active:after,
 .woocommerce-form-login input[type="submit"] {
-  background: #111;
+  background: #111111;
 }
 
 .woocommerce-checkout input[type="text"],
@@ -2010,7 +2010,7 @@ span.product-title {
   padding-top: 15px;
   clear: both;
   font-size: 18px;
-  color: #111;
+  color: #111111;
   font-weight: 600;
 }
 
@@ -2043,12 +2043,12 @@ span.product-title {
 }
 
 .button.wc-backward {
-  background: #111;
+  background: #111111;
   margin-top: 5px;
 }
 
 .price_slider_amount button[type="submit"] {
-  background: #111;
+  background: #111111;
 }
 
 #review_form_wrapper {
@@ -2489,7 +2489,7 @@ span.product-title {
 
 .woocommerce-tabs input[type="submit"] {
   padding: 10px 35px;
-  background: #111;
+  background: #111111;
   color: #fff;
   border:0 none;
   font-weight: 600;
@@ -2510,7 +2510,7 @@ span.product-title {
 }
 
 .woocommerce-product-gallery img {
-  display: block; 
+  display: block;
   width: 100%;
   height: auto;
   box-shadow: none;
