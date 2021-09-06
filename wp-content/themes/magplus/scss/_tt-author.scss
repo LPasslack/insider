@@ -1,0 +1,120 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  33 - TT-AUTHOR  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-author {
+  border: 1px solid $blockquote-border-mp;
+  padding: 30px 60px 30px 30px;
+}
+
+.tt-author-img {
+  float: left;
+  width: 90px;
+  height: 90px;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.tt-author-img img {
+  -moz-border-radius: 90px;
+  border-radius: 90px;
+}
+
+.tt-author-info {
+  padding-left: 107px;
+  padding-top: 7px;
+}
+
+.tt-author-title {
+  display: inline-block;
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $black-light-mp;
+  margin-bottom: 9px;
+}
+
+.tt-author-title:hover {
+  color: $mediumblue-60;
+}
+
+.tt-author-info .simple-text {
+  margin-bottom: 15px;
+}
+
+.tt-author-info .simple-text p {
+  font-weight: 400 !important;
+}
+
+.tt-author-social {
+  font-size: 0;
+}
+
+.tt-author-social li {
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.tt-author-social li:last-child {
+  margin-right: 0;
+}
+
+.tt-author-social a {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  color: $black-light-mp;
+}
+
+.tt-author-social a:hover {
+  color: $mediumblue-60;
+}
+
+@media (max-width:767px) {
+  .tt-author {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .tt-author-img {
+    float: none;
+  }
+
+  .tt-author-info {
+    padding-left: 0;
+  }
+}
+
+.tt-blog-nav-label {
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $color-3-mp;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.tt-blog-nav-title {
+  font-family: 'Roboto';
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $black-light-mp;
+}
+
+.tt-blog-nav-title:hover {
+  color: $mediumblue-60;
+}
+
+.tt-blog-nav.right {
+  text-align: right;
+}
+
+@media (max-width:767px) {
+  .tt-blog-nav.right {
+    text-align: left;
+  }
+}

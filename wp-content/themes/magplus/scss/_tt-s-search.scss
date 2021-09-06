@@ -1,0 +1,56 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  38 - TT-S-SEARCH  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-s-search {
+  position: relative;
+}
+
+.tt-s-search input[type="text"] {
+  width: 100%;
+  height: 42px;
+  border: 1px solid $blockquote-border-mp;
+  background: transparent;
+  padding-left: 44px;
+  padding-right: 15px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.tt-s-search input[type="text"]:focus {
+  border-color: $mediumblue-60;
+}
+
+.tt-s-search-submit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+}
+
+.tt-s-search-submit .fa {
+  font-size: 16px;
+  color: $mediumblue-60;
+  line-height: 42px;
+  font-style: normal;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.tt-s-search-submit:hover .fa {
+  color: #30373b;
+}
+
+.tt-s-search-submit input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+}

@@ -1,0 +1,108 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  41 - TT-NEWS  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-news {
+  border: 1px solid $blockquote-border-mp;
+  -webkit-box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+  -moz-box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+  box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+  text-align: center;
+}
+
+.tt-news-info {
+  padding: 17px 17px 33px 17px;
+}
+
+.tt-news-title {
+  font-size: 15px;
+}
+
+.tt-category-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.tt-category-block-style1 .bg:before {
+  content: '';
+  position: absolute;
+  background: url(../../img/slider/shadow_2.png);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tt-category-text-style1 h5 {
+  position: relative;
+  color: $white;
+}
+
+.tt-category-block-title {
+  font-size: 16px;
+  display: block;
+  padding-bottom: 4px;
+}
+
+.tt-category-block-style1 .tt-category-block-inner {
+  height: 210px !important;
+}
+
+.tt-category-block-inner {
+  display: table;
+  width: 100%;
+  height: 280px !important;
+  position: relative !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 22px;
+  position: relative;
+}
+
+.widget_category_block .tt-category-block-inner {
+  height: 120px !important;
+}
+
+.tt-category-block-style2 a,
+.tt-category-block-style1 a {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+}
+
+.tt-category-text-style2 {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.tt-category-text-style1 {
+  height: 100%;
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.tt-category-text-style2 .tt-category-title {
+  background: $white;
+  color: $black-light-mp;
+  padding: 10px 50px;
+  display: inline-block;
+}
+
+.tt-news-title:hover {
+  color: $mediumblue-60;
+}

@@ -1,0 +1,44 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  13 - TT-TITLE-BLOCK-2  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-title-block-2,
+.comment-reply-title,
+.footer_widget .tt-title-block.type-2 .tt-title-text,
+.footer_widget .tt-newsletter-title {
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $white;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+.footer_widget .tt-newsletter-title.c-h4 small {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.tt-title-block-2.size-2,
+.comment-reply-title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  text-transform: initial;
+}
+
+.tt-title-block-2.color-2,
+.comment-reply-title {
+  color: $grey-dark-mp;
+  opacity: 1;
+}
+
+.comment-reply-title {
+  margin-bottom: 25px;
+}
+
+.footer_widget.widget_text p {
+  color: $grey-dark-mp;
+}
+

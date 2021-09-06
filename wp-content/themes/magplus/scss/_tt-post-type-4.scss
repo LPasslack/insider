@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  17 - TT-POST TYPE-4 */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-post.type-4 {
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.tt-post.type-4 .tt-post-img {
+  margin-bottom: 8px;
+}
+
+.tt-post.type-4 .tt-post-info {
+  padding: 4px 0 0 0;
+}
+
+.tt-post.type-4 .tt-post-title {
+  margin-bottom: 4px;
+}
+
+.tt-post.type-4 .tt-post-label {
+  margin-bottom: 0;
+}
+
+@media (max-width:767px) {
+  .tt-post.type-4 {
+    text-align: center;
+  }
+}

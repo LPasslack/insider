@@ -1,0 +1,230 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  08 - TT-MSLIDE  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-mslide {
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.tt-mslide:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../../img/slider/shadow.png);
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+
+.tt-mslide-table {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 454px;
+  padding: 40px 0;
+}
+
+.tt-mslide-cell {
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+}
+
+.tt-mslide-block {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 41.66666667%;
+  z-index: 1;
+}
+
+.slider-style2 .tt-mslide-block {
+  width: 70%;
+}
+
+.slider-style2-post-grid {
+  position: relative;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+}
+
+.slider-style6 .tt-mslide-block {
+  width: 100%;
+  text-align: center;
+  top: 50%;
+  margin-top: -60px;
+}
+
+.slider-style6 .tt-mslide-table {
+  height: calc(100vh - 223px);
+}
+
+.slider-style6 .tt-mslide-title.c-h1 {
+  width: 40%;
+  font-size: 36px !important;
+  line-height: 1.2em;
+  margin: 0 auto;
+}
+
+.slider-style6 .tt-mslide-label {
+  font-size: 16px !important;
+  margin-top: 18px;
+}
+
+.tt-mslide.long .tt-mslide-block {
+  width: 100%;
+}
+
+.tt-mslide-cat {
+  font-size: 0;
+  margin-bottom: 12px;
+}
+
+.tt-mslide-cat .c-btn {
+  margin-right: 10px;
+}
+
+.tt-mslide-cat .c-btn:last-child {
+  margin-right: 0;
+}
+
+.tt-mslide-title,
+.tt-mslide-title a {
+  color: $white;
+}
+
+.tt-mslide-label {
+  font-family: 'Roboto';
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  color: $color-3-mp;
+  opacity: 0.7;
+}
+
+.tt-mslide-label span:after {
+  content: '•';
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 1px;
+}
+
+.tt-mslide-label span:last-child:after {
+  display: none;
+}
+
+.tt-mslide-label a {
+  font-weight: 700;
+  color: $white;
+}
+
+.tt-mslide-label a:hover {
+  color: $mediumblue-60;
+}
+
+.tt-mslide.type-2 .tt-mslide-block {
+  padding: 0 40px;
+  width: 100%;
+}
+
+.tt-mslide.long.type-2 .tt-mslide-block {
+  padding: 0 25px;
+}
+
+.tt-mslide.type-2:before {
+  background-image: url(../../img/slider/shadow_3.png);
+}
+
+.tt-mslide.type-2:after {
+  content: '';
+  display: block;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  opacity: 0.5;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.swiper-slide.active .tt-mslide.type-2:after {
+  opacity: 0;
+}
+
+.tt-mslide.type-2.style-2:after {
+  opacity: 0;
+}
+
+.tt-mslide.type-2.big .tt-mslide-block {
+  /* width: 65%; */
+}
+
+.tt-mslide.type-2.big .tt-mslide-table,
+.tt-mslide.type-2.long .tt-mslide-table {
+  height: 506px;
+}
+
+.tt-mslide.type-2.small .tt-mslide-table {
+  height: 248px;
+}
+
+.tt-mslide.type-2.small .tt-mslide-block {
+  width: 90%;
+}
+
+@media (max-width:991px) {
+  .tt-mslide-table {
+    height: 400px;
+  }
+
+  .tt-mslide .tt-post.type-7 .tt-post-img {
+    display: none;
+  }
+
+  .tt-mslide .tt-post.type-7 .tt-post-info {
+    padding-left: 0;
+  }
+
+  .tt-mslide-block {
+    width: 65%;
+  }
+
+  .tt-mslide.type-2.big .tt-mslide-table {
+    height: 400px;
+  }
+
+  .tt-mslide.type-2.big .tt-mslide-block {
+    width: 75%;
+  }
+
+  .tt-mslide.type-2.small .tt-mslide-table {
+    height: 200px;
+  }
+
+  .tt-mslide.type-2.small .tt-mslide-block {
+    width: 100%;
+  }
+}
+
+@media (max-width:767px) {
+  .tt-mslide-block {
+    width: 100%;
+  }
+
+  .tt-mslide.type-2.big .tt-mslide-block {
+    width: 100%;
+  }
+}
+

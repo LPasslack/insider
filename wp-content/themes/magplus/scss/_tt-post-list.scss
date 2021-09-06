@@ -1,0 +1,55 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  23 - TT-POST-LIST  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-post-list {
+  list-style: none;
+}
+
+.tt-post-list li {
+  border-bottom: 1px solid $blockquote-border-mp;
+}
+
+.tt-post-list li:last-child {
+  margin-bottom: 0;
+}
+
+.tt-post-list.dark li,
+.footer_widget .tt-post-list li,
+.footer_widget .tt-post-list.type-2 li:first-child,
+.footer_widget .tt-post-list.type-2 li:last-child,
+.footer_widget .tt-tab-wrapper.type-1,
+.footer_widget .tt-tab-wrapper.type-1 .tt-nav-tab-item,
+.footer_widget .tt-border-block,
+.footer_widget #wp-calendar,
+.footer_widget #wp-calendar caption,
+.footer_widget #wp-calendar tfoot,
+.footer_widget #wp-calendar td,
+.footer_widget #wp-calendar th,
+.footer_widget .tt-s-search input[type="text"] {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.tt-post-list.grey li {
+  border-color: rgba(102, 102, 102, 0.1);
+}
+
+.tt-post-list.type-2 li:first-child {
+  padding-top: 9px;
+  border-top: 1px solid $blockquote-border-mp;
+}
+
+.tt-post-list.type-2 li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.tt-post-list.type-3 li:first-child {
+  padding-top: 10px;
+  border-top: 1px solid #eaeaea
+}
+
+.tt-post-list.type-4 li {
+  border: 0;
+}
+

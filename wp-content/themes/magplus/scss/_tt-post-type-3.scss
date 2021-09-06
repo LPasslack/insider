@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  16 - TT-POST TYPE-3 */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-post.type-3 {
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.tt-post.type-3 .tt-post-info {
+  padding: 10px 0 0 0;
+}
+
+.tt-post.type-3 .tt-post-label {
+  margin-bottom: 0;
+}
+
+@media (max-width:767px) {
+  .tt-post.type-3 {
+    text-align: center;
+  }
+
+  .tt-post.type-3 .tt-post-img {
+    width: auto;
+  }
+}

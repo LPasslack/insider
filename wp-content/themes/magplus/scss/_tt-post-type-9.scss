@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  22 - TT-POST TYPE-9 */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-post.type-9 {
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.tt-post.type-9 .tt-post-img {
+  margin-bottom: 4px;
+}
+
+.tt-post.type-9 .tt-post-info {
+  padding: 4px 10px 0 10px;
+}
+
+.tt-post.type-9 .tt-post-title {
+  margin-bottom: 0;
+}
+
+@media (max-width:767px) {
+  .tt-post.type-9 {
+    text-align: center;
+  }
+
+  .tt-post.type-9 .tt-post-img {
+    width: auto;
+  }
+}

@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  28 - TT-TAGS  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-tags,
+.tagcloud {
+  font-size: 0;
+  list-style: none;
+  margin: 8px 0;
+}
+
+.tagcloud a {
+  font-size: 10px !important;
+  color: $grey-dark-mp;
+  border: 1px solid #ddd;
+  opacity: 1;
+  padding: 3px 7px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+
+.tagcloud a:hover {
+  border-color: $mediumblue-60;
+}
+
+.tt-tags li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+

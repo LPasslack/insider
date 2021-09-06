@@ -1,0 +1,39 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  18 - TT-POST TYPE-5 */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-post.type-5 {
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.tt-post.type-5 .tt-post-img {
+  margin-bottom: 8px;
+}
+
+.tt-post.type-5 .tt-post-info {
+  padding: 4px 10px 0 0;
+}
+
+.tt-post.type-5 .tt-post-cat {
+  margin-bottom: 1px;
+}
+
+.tt-post.type-5 .tt-post-title {
+  margin-bottom: 4px;
+}
+
+@media (max-width:767px) {
+  .tt-post.type-5 {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .tt-post.type-5 .tt-post-img,
+  .tt-post.type-5 .swiper-slide a.custom-hover,
+  .tt-post.type-5 .tt-post-img img {
+    width: 100%;
+  }
+}

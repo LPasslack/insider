@@ -1,0 +1,170 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  37 - TT-SHARE  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-share {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9;
+  width: 36px;
+  /* margin-left: -680px; */
+  margin-top: -80px;
+}
+
+.tt-share-title {
+  font-family: 'Roboto';
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 700;
+  color: $grey-dark-mp;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.tt-share-title span {
+  display: block;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.tt-share-list {
+  list-style: none;
+}
+
+.tt-share-list li {
+  /* margin-bottom: 10px; */
+}
+
+.tt-share-list a {
+  display: block;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  line-height: 32px;
+  border-width: 2px;
+  border-style: solid;
+  text-align: center;
+  color: $white;
+}
+
+.tt-share-list li:last-child {
+  margin-bottom: 0;
+}
+
+.tt-share-facebook {
+  background: #3b5998;
+  border-color: #3b5998;
+}
+
+.tt-share-facebook:hover {
+  color: #3b5998;
+}
+
+.tt-share-twitter {
+  background: #00aced;
+  border-color: #00aced;
+}
+
+.tt-share-twitter:hover {
+  color: #00aced;
+}
+
+.tt-share-pinterest {
+  background: #cc2026;
+  border-color: #cc2026;
+}
+
+.tt-share-pinterest:hover {
+  color: #cc2026;
+}
+
+.tt-share-google {
+  background: #dc4a38;
+  border-color: #dc4a38;
+}
+
+.tt-share-google:hover {
+  color: #dc4a38;
+}
+
+.tt-share-reddit {
+  background: #b6d4e5;
+  border-color: #b6d4e5;
+}
+
+.tt-share-reddit:hover {
+  color: #b6d4e5;
+}
+
+.tt-share-mail {
+  background: #333;
+  border-color: #333;
+}
+
+.tt-share-mail:hover {
+  color: #333;
+}
+
+.tt-share-list a:hover {
+  background: $white;
+}
+
+.tt-share.position-2 {
+  /* margin-left: -480px; */
+}
+
+@media (max-width:1309px) {
+  .tt-share {
+    margin-left: -625px;
+  }
+
+  .tt-share.position-2 {
+    margin-left: -430px;
+  }
+}
+
+@media (max-width:1199px) {
+  .tt-share {
+    margin-left: -527px;
+  }
+
+  .tt-share.position-2 {
+    margin-left: -364px;
+  }
+}
+
+@media (max-width:991px) {
+  .tt-share {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+    vertical-align: top;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+
+  .tt-share.position-2 {
+    margin-left: 0;
+  }
+
+  .tt-share-title {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+
+  .tt-share-list {
+    display: inline-block;
+    margin-bottom: -5px;
+  }
+
+  .tt-share-list li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+

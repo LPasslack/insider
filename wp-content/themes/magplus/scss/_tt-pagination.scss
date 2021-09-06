@@ -1,0 +1,66 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  29 - TT-PAGINATION  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.page-links {
+  padding-top: 15px;
+  clear: both;
+}
+
+.tt-pagination,
+.page-numbers,
+.woo-pagination {
+  font-size: 0;
+  list-style: none;
+  margin-bottom: -10px;
+}
+
+.tt-pagination li,
+.page-numbers li,
+.woo-pagination span,
+.woo-pagination a,
+.page-links a,
+.page-links>span {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.page-numbers span,
+.page-numbers a,
+.page-links a,
+.page-links>span {
+  display: inline-block;
+}
+
+.tt-pagination a,
+.page-numbers a,
+.page-numbers span,
+.woo-pagination a,
+.woo-pagination span.current,
+.page-links a,
+.page-links>span {
+  min-width: 30px;
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 500;
+  color: $grey-dark-mp;
+  text-align: center;
+  background: $blockquote-border-mp;
+  padding: 0 5px;
+}
+
+.tt-pagination a:hover,
+.tt-pagination li.active a,
+.page-numbers a:hover,
+.page-numbers li span.current,
+.woo-pagination a:hover,
+.woo-pagination span.current,
+.page-links>span,
+.page-links a:hover {
+  background: $mediumblue-60;
+  color: $white;
+}

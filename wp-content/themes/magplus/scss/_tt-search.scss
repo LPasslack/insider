@@ -1,0 +1,84 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  36 - TT-SEARCH  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-search {
+  position: relative;
+}
+
+.tt-search input[type="text"] {
+  width: 100%;
+  height: 50px;
+  font-family: 'Roboto';
+  font-size: 13px;
+  line-height: 48px;
+  font-weight: 300;
+  color: $color-3-mp;
+  padding: 0 15px 0 43px;
+  border: 1px solid $blockquote-border-mp;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.tt-search input[type="text"]::-webkit-input-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  color: $color-3-mp;
+  opacity: 1;
+}
+
+.tt-search input[type="text"]:-moz-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  color: $color-3-mp;
+  opacity: 1;
+}
+
+.tt-search input[type="text"]::-moz-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  color: $color-3-mp;
+  opacity: 1;
+}
+
+.tt-search input[type="text"]:-ms-input-placeholder {
+  font-size: 13px;
+  font-weight: 300;
+  color: $color-3-mp;
+  opacity: 1;
+}
+
+.tt-search input[type="text"]:focus {
+  border-color: $mediumblue-60;
+}
+
+.tt-search-submit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 50px;
+  font-size: 14px;
+  line-height: 50px;
+  text-align: right;
+  color: $grey-dark-mp;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.tt-search-submit input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+}
+
+.tt-search-submit:hover {
+  color: $mediumblue-60;
+}
+

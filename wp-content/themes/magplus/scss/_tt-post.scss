@@ -1,0 +1,233 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  14 - TT-POST  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-post {
+  border: 1px solid $blockquote-border-mp;
+  -webkit-box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+  -moz-box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+  box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+}
+
+.tt-post-info {
+  padding: 26px 30px 28px 30px;
+}
+
+.tt-post-cat {
+  font-family: 'Roboto';
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 700;
+  color: $grey-dark-mp;
+  text-transform: uppercase;
+  margin-bottom: 9px;
+}
+
+.tt-post-cat a {
+  color: inherit;
+  display: inline-block;
+}
+
+.tt-post-cat a:hover {
+  color: $mediumblue-60;
+}
+
+.tt-post-title {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.tt-post-title:hover {
+  color: $mediumblue-60;
+}
+
+.tt-post-label {
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $color-3-mp;
+  margin-bottom: 11px;
+}
+
+.tt-post-label span:after {
+  content: '•';
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 1px;
+}
+
+.tt-post-label span:last-child:after {
+  display: none;
+}
+
+.tt-post-label span a {
+  color: $color-3-mp;
+}
+
+.tt-post-label span a:hover {
+  color: $mediumblue-60;
+}
+
+.tt-post-info .simple-text {
+  margin-bottom: 11px;
+}
+
+.tt-post-bottom {
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $color-3-mp;
+}
+
+.tt-post-bottom span {
+  margin-right: 10px;
+}
+
+.tt-post-bottom span.zilla-likes-postfix {
+  margin: 0;
+}
+
+.tt-post-bottom .fa,
+.tt-post-bottom .material-icons {
+  color: #ddd;
+  margin-right: 4px;
+}
+
+.tt-post-bottom .material-icons {
+  font-size: 14px;
+  vertical-align: top;
+}
+
+.tt-post-bottom a {
+  color: $color-3-mp;
+}
+
+.tt-post-bottom a:hover {
+  color: $mediumblue-60;
+}
+
+.tt-post-bottom a:hover .fa {
+  color: $mediumblue-60;
+}
+
+.tt-post-img,
+.tt-post-img img,
+.tt-classic-grid-series img {
+  width: 100%;
+}
+
+.tt-post.dark .tt-post-title,
+.footer_widget .tt-post-title {
+  color: $white;
+  opacity: 1;
+}
+
+.tt-post.dark .tt-post-title:hover,
+.footer_widget .tt-post-title:hover {
+  opacity: 1;
+}
+
+.tt-post.dark .tt-post-cat,
+.footer_widget .tt-post .tt-post-label {
+  color: $white;
+  opacity: 1;
+}
+
+.tt-post.light .tt-post-title,
+.footer_widget.widget_recent_entries a:hover {
+  color: $white;
+}
+
+.tt-post.light .tt-post-title:hover {
+  color: $mediumblue-60;
+}
+
+.tt-post.light .tt-post-cat {
+  color: $white;
+  opacity: 0.7;
+}
+
+.tt-post.grey .tt-post-title {
+  color: rgba(17, 17, 17, 0.6);
+}
+
+.tt-post.grey .tt-post-title:hover {
+  color: $black-light-mp;
+}
+
+.tt-post.grey .tt-post-cat {
+  color: $grey-dark-mp;
+  opacity: 0.7;
+}
+
+.tt-post-length {
+  right: 0;
+  padding: 5px;
+  bottom: 0;
+}
+
+.tt-post-icon,
+.tt-post-length {
+  display: block;
+  position: absolute;
+  font-weight: 500;
+  font-size: 12px;
+  text-align: center;
+  color: $white;
+  background: rgba(17, 17, 17, 0.7);
+  z-index: 100;
+}
+
+.tt-post-icon {
+  left: 0;
+  bottom: 0;
+  padding: 10px 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tt-post-icon small {
+  font-weight: 500;
+  font-size: 9px;
+}
+
+.type-7 .tt-post-icon,
+.tt-post-list .tt-post-two-col .tt-post-icon {
+  padding: 4px 6px 3px 6px;
+}
+
+.type-7 .tt-post-icon .material-icons,
+.tt-post-list .tt-post-two-col .tt-post-icon .material-icons {
+  font-size: 14px;
+}
+
+@media (max-width:1199px) {
+  .tt-post-info {
+    padding-right: 70px;
+  }
+}
+
+@media (max-width:767px) {
+  .tt-post {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tt-post-info {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .tt-shortcode-1 .row {
+    overflow-y: scroll;
+    height: 70px;
+  }
+
+  .tt-shortcode-1 .tt-post {
+    margin-bottom: 10px;
+  }
+}
+

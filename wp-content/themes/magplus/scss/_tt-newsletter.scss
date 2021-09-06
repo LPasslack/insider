@@ -1,0 +1,25 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  25 - TT-NEWSLETTER  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-newsletter {
+  text-align: center;
+}
+
+.tt-newsletter .simple-text {
+  margin-bottom: 12px;
+}
+
+.tt-newsletter-img {
+  margin-bottom: 28px;
+  display: inline-block;
+}
+
+.tt-newsletter input[type="text"],
+.tt-newsletter input[type="email"] {
+  margin-bottom: 10px;
+}
+
+.tt-newsletter .c-btn.type-1.style-2 {
+  color: $white;
+}

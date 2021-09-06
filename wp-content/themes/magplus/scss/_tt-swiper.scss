@@ -1,0 +1,215 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  07 - TT-SWIPER  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-custom-arrows {
+  position: relative;
+}
+
+.custom-arrow-left,
+.custom-arrow-right {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.tt-footer-post-slider .custom-arrow-left,
+.tt-footer-post-slider .custom-arrow-right {
+  position: relative;
+  display: inline-block;
+  z-index: 8;
+}
+
+.custom-arrow-left {
+  left: 0;
+}
+
+.custom-arrow-right {
+  right: 0;
+}
+
+.custom-arrow-left.tt-swiper-arrow.type-2 {
+  left: 20px;
+}
+
+.custom-arrow-right.tt-swiper-arrow.type-2 {
+  right: 20px;
+}
+
+.c-arrow {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+  line-height: 32px;
+  text-align: center;
+  color: $white;
+  background: rgba(17, 17, 17, 0.7);
+  margin-top: -16px;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.c-arrow:hover {
+  background: $black-light-mp;
+}
+
+.c-arrow .fa {
+  font-style: normal;
+}
+
+.c-arrow.size-2 {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  margin-top: -20px;
+}
+
+.tt-trending-slider-post .c-arrow.size-2 {
+  /* margin-top: -55px !important; */
+  margin-top: 20px !important;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  margin: 0 2px;
+  font-size: 12px;
+}
+
+.tt-trending-slider-post .c-arrow.pos-2.left {
+  left: 0;
+}
+
+.tt-trending-slider-post .c-arrow.pos-2.right {
+  right: 0;
+}
+
+.c-arrow.size-2.left .fa {
+  margin-left: -2px;
+}
+
+.c-arrow.size-2.right .fa {
+  margin-right: -2px;
+}
+
+.c-arrow.style-2 {
+  border: 1px solid $mediumblue-dark;
+  background: transparent;
+  color: $white-60;
+}
+
+.c-arrow.style-2:hover {
+  background: $mediumblue-dark;
+  color: $white;
+}
+
+.c-arrow.pos-2.left {
+  left: -40px;
+}
+
+.c-arrow.pos-2.right {
+  right: -40px;
+}
+
+.c-arrow.pos-3.left {
+  left: -40px;
+  margin-top: -45px;
+}
+
+.c-arrow.pos-3.right {
+  right: -40px;
+  margin-top: -45px;
+}
+
+.c-arrow.pos-4.left {
+  top: auto;
+  bottom: 10px;
+  left: auto;
+  right: 47px;
+  margin-top: 0;
+}
+
+.c-arrow.pos-4.right {
+  top: auto;
+  bottom: 10px;
+  right: 10px;
+  margin-top: 0;
+}
+
+.widget_latest_posts_entries .tt-post-list.type-2 .c-arrow,
+.tt-classic-grid-series .tt-post-list.type-3 .c-arrow,
+.widget_recent_posts_entries .c-arrow,
+.widget_posts_tabbed_entries .tt-post-list .c-arrow {
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  font-size: 10px;
+  margin-top: -12px;
+}
+
+.c-pagination {
+  position: absolute;
+  bottom: 7px;
+  left: 0;
+}
+
+.c-pagination .swiper-pagination-switch {
+  width: 8px;
+  height: 8px;
+}
+
+.c-pagination .swiper-active-switch {
+  background: $white;
+  border-color: $white;
+}
+
+.c-pagination.color-2 .swiper-pagination-switch {
+  border-color: $mediumblue-60;
+}
+
+.c-pagination.color-2 .swiper-active-switch {
+  background: $mediumblue-60;
+}
+
+.c-pagination.pos-2 {
+  bottom: 13px;
+}
+
+.c-pagination.pos-3 {
+  position: static;
+  margin-top: 25px;
+}
+
+.tt-swiper-margin {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.tt-swiper-margin-entry {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.tt-swiper-margin-10 {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.tt-swiper-margin-10-entry {
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.tt-slide-anchor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+

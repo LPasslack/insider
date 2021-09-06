@@ -1,0 +1,62 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  10 - TT-SPONSOR  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-sponsor {
+  line-height: 1;
+}
+
+.tt-sponsor-img {
+  float: left;
+}
+
+.tt-sponsor-info {
+  display: table-cell;
+  height: 89px;
+  padding-left: 15px;
+  vertical-align: middle;
+}
+
+.tt-sponsor-title {
+  display: block;
+  color: $black-light-mp;
+  margin-bottom: 3px;
+}
+
+.tt-sponsor-title:hover {
+  color: $mediumblue-60;
+}
+
+.tt-sponsor-info .simple-text {
+  margin-bottom: 10px;
+}
+
+.tt-sponsor.type-2 .tt-sponsor-entry {
+  width: 650px;
+  background: #ecf8f2;
+  padding: 14px 0 14px 11px;
+}
+
+.tt-sponsor.type-2 .tt-sponsor-info {
+  padding-left: 0;
+  letter-spacing: 0.3px;
+}
+
+.tt-sponsor.type-2 .tt-sponsor-title {
+  color: #67736d;
+}
+
+.tt-sponsor.type-2 .tt-sponsor-title:hover {
+  color: $mediumblue-60;
+}
+
+.tt-sponsor.type-2 .simple-text {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1199px) {
+  .tt-sponsor.type-2 .tt-sponsor-entry {
+    width: 420px;
+  }
+}
+

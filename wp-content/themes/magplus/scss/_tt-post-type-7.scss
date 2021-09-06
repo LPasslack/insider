@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  20 - TT-POST TYPE-7 */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-post.type-7 {
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.tt-post.type-7 .tt-post-img {
+  float: left;
+  width: 80px;
+}
+
+.tt-post.type-7 .tt-post-info {
+  padding: 0 0 0 92px;
+}
+
+.tt-post.type-7 .tt-post-cat {
+  margin-bottom: 0;
+}
+
+.tt-post.type-7 .tt-post-label {
+  margin-bottom: 0;
+}
+
+@media (max-width:1199px) {
+  .tt-post.type-7 .tt-post-info {
+    padding-right: 0;
+  }
+}

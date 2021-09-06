@@ -1,0 +1,116 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  03 - GLOBAL SETTINGS  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+body.bg-grey {
+  background-color: $grey;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+.bg-white {
+  background: $white;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+/* table */
+.table-view {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+.row-view {
+  display: table-row;
+}
+
+.cell-view {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.background-block {
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+/*  nopadding class  */
+.nopadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nomargin {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+a,
+input,
+textarea,
+button,
+select {
+  outline: none !important;
+}
+
+a {
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+#wrapper {
+  overflow: hidden;
+}
+
+.boxed #content-wrapper {
+  width: 1338px;
+  margin: 0 auto;
+}
+
+.fluid-9 {
+  padding-left: 9px;
+  padding-right: -9px;
+  overflow: hidden;
+}
+
+.row-14 {
+  margin-left: -7px;
+  margin-right: -7px;
+}
+
+.row-14>div[class^="col-"] {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+@media (min-width:1310px) {
+  .container {
+    width: 1280px;
+  }
+}
+

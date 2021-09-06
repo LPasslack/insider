@@ -1,0 +1,26 @@
+.widget_archive label,
+.widget_categories label {
+  display: none;
+}
+
+.widget_rss,
+.widget_text,
+.widget_recent_comments {
+  position: relative;
+  line-height: 21px;
+}
+
+.widget_nav_menu ul li ul {
+  padding-left: 15px;
+}
+
+.footer_widget.widget_tag_cloud .tagcloud {
+  position: relative;
+  margin: 0;
+}
+
+.footer_widget.widget_tag_cloud .tagcloud a {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}

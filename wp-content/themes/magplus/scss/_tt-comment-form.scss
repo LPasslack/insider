@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  35 - TT-COMMENT-FORM  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.comment-form .tt-comment-form-ava {
+  float: left;
+  display: block;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.tt-comment-form-content,
+.tt-comment-form {
+  padding-left: 55px;
+  padding-top: 6px;
+}
+
+p.logged-in-as {
+  margin-bottom: 10px !important;
+}
+
+.tt-comment-form {
+  padding-left: 0;
+}
+
+.tt-comment-form .c-area {
+  margin-bottom: 10px;
+}
+
+.tt-comment-form .c-input {
+  margin-bottom: 19px;
+}
+
+.tt-comment-form .c-btn {
+  margin-top: -17px;
+}
+
+@media (max-width:767px) {
+  .tt-comment-form-ava {
+    float: none;
+    margin: 0 auto 10px auto;
+  }
+
+  .tt-comment-form-content {
+    padding-left: 0;
+  }
+}
+

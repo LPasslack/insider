@@ -1,0 +1,126 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  43 - TT-MSLIDE-2  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-mblock {
+  position: relative;
+  border: 1px solid $blockquote-border-mp;
+  -webkit-box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+  -moz-box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+  box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+}
+
+.tt-mblock-info {
+  width: 32%;
+  padding: 29px;
+}
+
+.tt-mblock-cat {
+  font-size: 0;
+  margin-bottom: 10px;
+}
+
+.tt-mblock-cat .c-btn {
+  margin-right: 10px;
+}
+
+.tt-mblock-cat .c-btn:last-child {
+  margin-right: 0;
+}
+
+.tt-mblock-bg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 32%;
+  right: 0;
+  bottom: 0;
+}
+
+.tt-mblock-bg:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0) 54%, rgba(0, 0, 0, 0.1) 72%, rgba(0, 0, 0, 0.32) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0) 54%, rgba(0, 0, 0, 0.1) 72%, rgba(0, 0, 0, 0.32) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 48%, rgba(0, 0, 0, 0) 54%, rgba(0, 0, 0, 0.1) 72%, rgba(0, 0, 0, 0.32) 100%);
+  z-index: 2;
+}
+
+.tt-mblock-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tt-mblock-title {
+  display: inline-block;
+  height: 207px;
+  margin-bottom: 40px;
+}
+
+.tt-mblock-title:hover {
+  color: $mediumblue-60;
+}
+
+.tt-mblock-label {
+  font-family: 'Roboto';
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 700;
+  color: $color-3-mp;
+}
+
+.tt-mblock-label span:after {
+  content: '•';
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 4px;
+}
+
+.tt-mblock-label span:last-child:after {
+  display: none;
+}
+
+.tt-mblock-label a {
+  color: $black-light-mp;
+}
+
+.tt-mblock-label a:hover {
+  color: $mediumblue-60;
+}
+
+@media (max-width:991px) {
+  .tt-mblock-info {
+    width: 45%;
+  }
+
+  .tt-mblock-bg {
+    left: 45%;
+  }
+}
+
+@media (max-width:767px) {
+  .tt-mblock-bg {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 200px;
+  }
+
+  .tt-mblock-title {
+    height: auto;
+    margin-bottom: 25px;
+  }
+
+  .tt-mblock-info {
+    width: 100%;
+    padding: 15px;
+  }
+}

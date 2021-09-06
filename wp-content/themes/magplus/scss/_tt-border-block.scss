@@ -1,0 +1,17 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  24 - TT-BORDER-BLOCK  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-border-block {
+  border: 1px solid $blockquote-border-mp;
+  padding: 30px;
+  -webkit-box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+  -moz-box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+  box-shadow: 0px 1px 0px 0px $blockquote-border-mp;
+}
+
+@media (max-width:767px) {
+  .tt-border-block {
+    padding: 15px;
+  }
+}

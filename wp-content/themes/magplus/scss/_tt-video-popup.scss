@@ -1,0 +1,198 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  32 - TT-VIDEO-POPUP  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-video-popup {
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  -moz-transition-delay: .3s;
+  transition-delay: .3s;
+  -webkit-transition-delay: .3s;
+  z-index: 999;
+}
+
+.tt-video-popup.active {
+  left: 0;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-delay: 0s;
+}
+
+.tt-video-popup-overlay {
+  position: absolute;
+  left: 0;
+  top: -100px;
+  right: 0;
+  bottom: -100px;
+  background: $white;
+  -moz-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  opacity: 0;
+}
+
+.tt-video-popup.active .tt-video-popup-overlay {
+  opacity: 0.9;
+}
+
+.tt-video-popup-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: 0;
+  text-align: center;
+  -moz-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  opacity: 0;
+  visibility: hidden;
+  padding: 15px;
+}
+
+.tt-video-popup.active .tt-video-popup-content {
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.tt-video-popup-content:after {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  content: "";
+}
+
+.tt-video-popup-container {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  text-align: left;
+  background: $white;
+  max-width: 1200px;
+}
+
+.tt-video-popup-container .embed-responsive {
+  width: 700px;
+  max-width: 100%;
+}
+
+.tt-video-popup-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: $white;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.tt-video-popup-close:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 1px;
+  background: $grey;
+  margin-left: -10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.tt-video-popup-close:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 1px;
+  background: $grey;
+  margin-left: -10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.tt-video-popup-close:hover {
+  background: $mediumblue-60;
+}
+
+.tt-video-popup-close:hover:before,
+.tt-video-popup-close:hover:after {
+  background: $white;
+}
+
+.tt-video-popup-layer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 10000px;
+}
+
+.tt-video-popup-align {
+  overflow: hidden;
+}
+
+@media (max-width:767px) {
+  .tt-video-popup-container .embed-responsive {
+    width: 400px;
+  }
+
+  .slider-style3-frame,
+  .slider-style4-frame,
+  .slider-style5-frame,
+  .slider-style3-frame:nth-child(2),
+  .slider-style3-frame:nth-child(3),
+  .slider-style4-frame:nth-child(2),
+  .slider-style4-frame:nth-child(3) {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  .slider-style6 .tt-mslide-title.c-h1 {
+    padding: 0;
+  }
+}
+
+@media (max-width:480px) {
+  .tt-video-popup-container .embed-responsive {
+    width: 290px;
+  }
+}

@@ -1,0 +1,47 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  19 - TT-POST TYPE-6 */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-post.type-6 {
+  border: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.tt-post.type-6 .tt-post-img {
+  float: left;
+  width: 288px;
+  float: left;
+}
+
+.tt-post.type-6 .tt-post-info {
+  display: block;
+  padding: 10px 0 0 308px;
+  vertical-align: middle;
+}
+
+@media (max-width:767px) {
+  .tt-post.type-6 {
+    text-align: center;
+  }
+
+  .tt-post.type-6 .tt-post-img {
+    float: none;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  .tt-post.type-6 .tt-post-info {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .tt-recent-news img,
+  .tt-footer-post-slider .tt-post-img,
+  .tt-footer-post-slider .tt-post-img img,
+  .tt-post.type-8 .tt-post-img,
+  .tt-post.type-8 .tt-post-img img {
+    width: 100% !important;
+  }
+}

@@ -1,0 +1,127 @@
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+/*  27 - TT-FOOTER  */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
+.tt-footer {
+  position: relative;
+  background: $black;
+  padding-top: 60px;
+}
+
+.tt-f-social {
+  list-style: none;
+  font-size: 0;
+}
+
+.tt-f-social li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.tt-f-social li:last-child {
+  margin-right: 0;
+}
+
+.tt-f-social a {
+  display: block;
+  font-size: 16px;
+  color: $white;
+  opacity: 0.4;
+}
+
+.tt-f-social a:hover {
+  opacity: 1;
+}
+
+.tt-f-social.grey a {
+  color: $grey-dark-mp;
+  opacity: 0.6;
+}
+
+.tt-f-social.grey a:hover {
+  opacity: 1;
+}
+
+.tt-f-list {
+  list-style: none;
+}
+
+.tt-f-list li,
+.footer_widget.widget_nav_menu li {
+  margin-bottom: 20px;
+}
+
+.tt-f-list a,
+.footer_widget.widget_nav_menu li a {
+  font-family: 'Roboto';
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $white;
+  opacity: 0.4;
+}
+
+.tt-f-list a:hover,
+.footer_widget.widget_nav_menu li a:hover {
+  opacity: 1;
+}
+
+.tt-f-list.grey a {
+  color: $grey-dark-mp;
+  opacity: 0.6;
+}
+
+.tt-f-list.grey a:hover {
+  opacity: 1;
+}
+
+.tt-footer-copy {
+  font-family: 'Roboto';
+  font-size: 10px;
+  line-height: 14px;
+  font-weight: 500;
+  color: $grey-light;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  padding: 12px 0;
+  background-color: $aquamarin-dark;
+}
+
+.tt-footer-copy a {
+  color: $grey-light;
+}
+
+.tt-footer-copy a {
+  color: $white;
+}
+
+.tt-footer.grey {
+  background: $orange;
+}
+
+.tt-footer.grey .tt-footer-copy,
+.tt-footer-copy.grey {
+  background: $orange;
+  color: rgba(17, 17, 17, 0.6);
+  opacity: 1;
+  border-color: #dcd8cd;
+}
+
+.tt-footer.boxed {
+  margin-left: -15px;
+  margin-right: -15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (max-width:991px) {
+  .tt-footer {
+    padding-top: 50px;
+  }
+}
+
+@media (max-width:767px) {
+  .tt-footer {
+    padding-top: 30px;
+  }
+}
