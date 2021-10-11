@@ -1,0 +1,9 @@
+[class*=ugb-] form[class*=-link],
+form[class*=ugb-][class*=-link],
+[class*=ugb-] + form[class*=-link] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=common.css.map */

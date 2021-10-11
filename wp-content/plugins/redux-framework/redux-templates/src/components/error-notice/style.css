@@ -13,22 +13,17 @@
   width: 50%;
   right: 0;
   top: 70px;
-  transition: opacity 2s linear;
-}
-.redux-templates-error-notice .components-notice.is-dismissible {
-  padding-right: 0;
-}
-.redux-templates-error-notice .components-notice.is-success {
-  border-left-color: #4ab866;
-  background-color: rgba(74, 184, 102, 0.95);
-}
-.redux-templates-error-notice .components-notice.is-warning {
-  border-left-color: #f0b849;
-  background-color: rgba(254, 248, 238, 0.95);
-}
-.redux-templates-error-notice .components-notice.is-error {
-  border-left-color: #d94f4f;
-  background-color: rgba(249, 226, 226, 0.95);
-}
+  transition: opacity 2s linear; }
+  .redux-templates-error-notice .components-notice.is-dismissible {
+    padding-right: 0; }
+  .redux-templates-error-notice .components-notice.is-success {
+    border-left-color: #4ab866;
+    background-color: rgba(74, 184, 102, 0.95); }
+  .redux-templates-error-notice .components-notice.is-warning {
+    border-left-color: #f0b849;
+    background-color: rgba(254, 248, 238, 0.95); }
+  .redux-templates-error-notice .components-notice.is-error {
+    border-left-color: #d94f4f;
+    background-color: rgba(249, 226, 226, 0.95); }
 
 /*# sourceMappingURL=style.css.map */

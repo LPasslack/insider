@@ -44,7 +44,7 @@
   padding: 0 12px;
   line-height: 33px;
   color: $white;
-  background: $mediumblue-60;
+  background: $aquamarin;
 }
 
 .style1 .tt-title-text:before,
@@ -79,7 +79,7 @@
 .sidebar-heading-style2 .tt-title-text {
   position: relative;
   display: inline-block;
-  border-bottom: 3px solid $mediumblue-60;
+  border-bottom: 3px solid $aquamarin;
   height: 32px;
   line-height: 28px;
   font-weight: 700;
@@ -103,7 +103,7 @@
 .style3.tt-title-block,
 .sidebar-heading-style3 .tt-title-block {
   background: $blockquote-border-mp;
-  border-left: 4px solid $mediumblue-60;
+  border-left: 4px solid $aquamarin;
   padding: 8px 10px 7px 10px;
   width: 100%;
 }
@@ -112,7 +112,7 @@
 .style5.tt-title-block,
 .sidebar-heading-style4 .tt-title-block,
 .sidebar-heading-style5 .tt-title-block {
-  border-bottom: 3px solid $mediumblue-60;
+  border-bottom: 3px solid $aquamarin;
 }
 
 .style4 .tt-title-text,
@@ -120,7 +120,7 @@
 .sidebar-heading-style4 .tt-title-text,
 .sidebar-heading-style5 .tt-title-text {
   position: relative;
-  background: $mediumblue-60;
+  background: $aquamarin;
   height: 32px;
   line-height: 35px;
   text-transform: none;
@@ -141,7 +141,7 @@
   height: 0;
   border-style: solid;
   border-width: 32px 0 0 32px;
-  border-color: transparent transparent transparent $mediumblue-60;
+  border-color: transparent transparent transparent $aquamarin;
   top: 0;
   right: -32px;
 }

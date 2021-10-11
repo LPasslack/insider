@@ -1399,6 +1399,70 @@ b {
     margin-right: auto;
   }
 }
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-turquoise .vc_icon_element-icon {
+  color: #038e9e !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-pink .vc_icon_element-icon {
+  color: #ff9b5f !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-violet .vc_icon_element-icon {
+  color: #8d6dc4 !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-peacoc .vc_icon_element-icon {
+  color: #54bfcf !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-chino .vc_icon_element-icon {
+  color: #f5be82 !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-mulled_wine .vc_icon_element-icon {
+  color: #505050 !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-vista_blue .vc_icon_element-icon {
+  color: #339bd3 !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-black .vc_icon_element-icon {
+  color: black !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-grey .vc_icon_element-icon {
+  color: #e0e0e0 !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-orange .vc_icon_element-icon {
+  color: #f59b69 !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-sky .vc_icon_element-icon {
+  color: #0082c8 !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-green .vc_icon_element-icon {
+  color: #6dab3c !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-juicy_pink .vc_icon_element-icon {
+  color: #ac0000 !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-sandy_brown .vc_icon_element-icon {
+  color: rgba(255, 155, 95, 0.4) !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-purple .vc_icon_element-icon {
+  color: #b97ebb !important;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner.vc_icon_element-color-white .vc_icon_element-icon {
+  color: white !important;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 /*  05 - TT-HEADER  */
 /* ------------------------------------------------------------------------------------------------------------------------------- */
@@ -3619,7 +3683,7 @@ b {
   padding: 0 12px;
   line-height: 33px;
   color: white;
-  background: #66b4de;
+  background: #54bfcf;
 }
 
 .style1 .tt-title-text:before,
@@ -3654,7 +3718,7 @@ b {
 .sidebar-heading-style2 .tt-title-text {
   position: relative;
   display: inline-block;
-  border-bottom: 3px solid #66b4de;
+  border-bottom: 3px solid #54bfcf;
   height: 32px;
   line-height: 28px;
   font-weight: 700;
@@ -3678,7 +3742,7 @@ b {
 .style3.tt-title-block,
 .sidebar-heading-style3 .tt-title-block {
   background: #eaeaea;
-  border-left: 4px solid #66b4de;
+  border-left: 4px solid #54bfcf;
   padding: 8px 10px 7px 10px;
   width: 100%;
 }
@@ -3687,7 +3751,7 @@ b {
 .style5.tt-title-block,
 .sidebar-heading-style4 .tt-title-block,
 .sidebar-heading-style5 .tt-title-block {
-  border-bottom: 3px solid #66b4de;
+  border-bottom: 3px solid #54bfcf;
 }
 
 .style4 .tt-title-text,
@@ -3695,7 +3759,7 @@ b {
 .sidebar-heading-style4 .tt-title-text,
 .sidebar-heading-style5 .tt-title-text {
   position: relative;
-  background: #66b4de;
+  background: #54bfcf;
   height: 32px;
   line-height: 35px;
   text-transform: none;
@@ -3716,7 +3780,7 @@ b {
   height: 0;
   border-style: solid;
   border-width: 32px 0 0 32px;
-  border-color: transparent transparent transparent #66b4de;
+  border-color: transparent transparent transparent #54bfcf;
   top: 0;
   right: -32px;
 }
@@ -4743,7 +4807,6 @@ b {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(../../img/slider/shadow_2.png);
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   background-size: 100% 100%;
@@ -5933,7 +5996,6 @@ p.logged-in-as {
 .tt-category-block-style1 .bg:before {
   content: "";
   position: absolute;
-  background: url(../../img/slider/shadow_2.png);
   -webkit-background-size: 100% 100%;
   -moz-background-size: 100% 100%;
   background-size: 100% 100%;

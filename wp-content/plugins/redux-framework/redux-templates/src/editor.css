@@ -13,28 +13,23 @@
   background: transparent;
   cursor: pointer;
   -webkit-appearance: none;
-  transition: 400ms;
-}
-#redux-templatesImportCollectionBtn svg {
-  height: 16px;
-  width: 16px;
-  margin-right: 8px;
-}
-#redux-templatesImportCollectionBtn svg * {
-  stroke: #555d66;
-  fill: #555d66;
-  stroke-width: 0;
-}
-#redux-templatesImportCollectionBtn:hover, #redux-templatesImportCollectionBtn:focus, #redux-templatesImportCollectionBtn:active {
-  text-decoration: none;
-  border: 1px solid #191e23;
-  color: #191e23;
-}
-#redux-templatesImportCollectionBtn:hover svg *, #redux-templatesImportCollectionBtn:focus svg *, #redux-templatesImportCollectionBtn:active svg * {
-  stroke: #191e23 !important;
-  fill: #191e23 !important;
-  stroke-width: 0;
-}
+  transition: 400ms; }
+  #redux-templatesImportCollectionBtn svg {
+    height: 16px;
+    width: 16px;
+    margin-right: 8px; }
+    #redux-templatesImportCollectionBtn svg * {
+      stroke: #555d66;
+      fill: #555d66;
+      stroke-width: 0; }
+  #redux-templatesImportCollectionBtn:hover, #redux-templatesImportCollectionBtn:focus, #redux-templatesImportCollectionBtn:active {
+    text-decoration: none;
+    border: 1px solid #191e23;
+    color: #191e23; }
+    #redux-templatesImportCollectionBtn:hover svg *, #redux-templatesImportCollectionBtn:focus svg *, #redux-templatesImportCollectionBtn:active svg * {
+      stroke: #191e23 !important;
+      fill: #191e23 !important;
+      stroke-width: 0; }
 
 .redux-templates-editor-btn {
   background: none;
@@ -47,29 +42,15 @@
   -webkit-appearance: button;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
-}
-.redux-templates-editor-btn::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
+  -ms-user-select: none; }
+  .redux-templates-editor-btn::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
 
 .d-flex {
-  display: flex;
-}
+  display: flex; }
 
 .justify-content-center {
-  justify-content: center;
-}
-
-.redux-css-editor {
-  border: 1px solid #e2e4e7;
-  margin-bottom: 20px;
-}
-
-.redux-css-editor-help {
-  background: #f7f7f7;
-  padding: 20px;
-}
+  justify-content: center; }
 
 /*# sourceMappingURL=editor.css.map */

@@ -11,7 +11,7 @@
 /* 01 - VARIABLES */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 
-;
+
 (function($, window, document, undefined) {
 
   "use strict";
@@ -278,7 +278,6 @@
   /*==============================*/
 
   function circleProgress() {
-    console.log('sdfs');
     if ($('.tt-circle-progress').length > 0) {
       var progressValue = $('.tt-circle-progress').data('progress'),
         strokeVal = 326.725 - 326.725 * (progressValue / 100);
@@ -382,7 +381,7 @@
     if ($('input[type=number]').length) {
       console.log('sfsdf');
       $('input[type=number]').number();
-    };
+    }
   }
 
   /*mobile menu*/
