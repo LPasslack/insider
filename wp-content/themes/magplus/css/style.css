@@ -167,8 +167,15 @@ q {
   quotes: none;
 }
 
+.tt-mobile-block .logo {
+  text-align: center;
+  display: block;
+}
+
 img {
-  max-width: 100%;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 80px;
   height: auto;
   vertical-align: middle;
 }
@@ -1512,7 +1519,7 @@ b {
   z-index: 101;
 }
 
-.tt-header .logo img {
++ .tt-header .logo img {
   display: inline-block;
   width: auto;
   max-width: 70px;

@@ -112,8 +112,15 @@ q {
   quotes: none;
 }
 
+.tt-mobile-block .logo {
+  text-align: center;
+  display: block;
+}
+
 img {
-  max-width: 100%;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 80px;
   height: auto;
   vertical-align: middle;
 }
