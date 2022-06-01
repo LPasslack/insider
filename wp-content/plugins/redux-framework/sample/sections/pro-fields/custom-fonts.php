@@ -25,7 +25,7 @@ Redux::set_section(
 				'type'        => 'typography',
 				'title'       => esc_html__( 'Custom Fonts Typography', 'your-textdomain-here' ),
 				'subtitle'    => 'This will modify the font family of the .entry-title classes.',
-				'output'      => '.site-title, .widget-title, .entry-title, .wp-block-site-title',
+				'output'      => '.site-title, .widget-title, .entry-title',
 				'font-size'   => false,
 				'line-height' => false,
 				'text-align'  => false,

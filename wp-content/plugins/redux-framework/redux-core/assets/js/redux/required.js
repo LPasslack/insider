@@ -303,12 +303,12 @@
 		switch ( operation ) {
 			case '=':
 			case 'equals':
-				if ( Array.isArray( parentValue ) ) {
+				if ( $.isArray( parentValue ) ) {
 					$( parentValue[0] ).each(
 						function( idx, val ) {
 							idx = null;
 
-							if ( Array.isArray( checkValue ) ) {
+							if ( $.isArray( checkValue ) ) {
 								$( checkValue ).each(
 									function( i, v ) {
 										i = null;
@@ -329,7 +329,7 @@
 						}
 					);
 				} else {
-					if ( Array.isArray( checkValue ) ) {
+					if ( $.isArray( checkValue ) ) {
 						$( checkValue ).each(
 							function( i, v ) {
 								i = null;
@@ -349,12 +349,12 @@
 
 			case '!=':
 			case 'not':
-				if ( Array.isArray( parentValue ) ) {
+				if ( $.isArray( parentValue ) ) {
 					$( parentValue[0] ).each(
 						function( idx, val ) {
 							idx = null;
 
-							if ( Array.isArray( checkValue ) ) {
+							if ( $.isArray( checkValue ) ) {
 								$( checkValue ).each(
 									function( i, v ) {
 										i = null;
@@ -376,7 +376,7 @@
 						}
 					);
 				} else {
-					if ( Array.isArray( checkValue ) ) {
+					if ( $.isArray( checkValue ) ) {
 						$( checkValue ).each(
 							function( i, v ) {
 								i = null;
@@ -443,7 +443,7 @@
 					);
 				}
 
-				if ( Array.isArray( checkValue ) ) {
+				if ( $.isArray( checkValue ) ) {
 					$( checkValue ).each(
 						function( idx, val ) {
 							var breakMe = false;
@@ -504,7 +504,7 @@
 					checkValue = arr;
 				}
 
-				if ( Array.isArray( checkValue ) ) {
+				if ( $.isArray( checkValue ) ) {
 					$( checkValue ).each(
 						function( idx, val ) {
 							idx = null;

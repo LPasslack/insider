@@ -541,7 +541,7 @@
   width: 100%;
 }
 .redux-container .redux-main .hide {
-  display: none !important;
+  display: none;
 }
 .redux-container .redux-main .redux-field-container {
   padding: 20px 0;

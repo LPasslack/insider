@@ -76,7 +76,7 @@
 						change: function( e, ui ) {
 							$( this ).val( ui.color.toString() );
 							redux_change( $( this ) );
-							el.find( '#' + e.target.getAttribute( 'data-id' ) + '-transparency' ).prop( 'checked', false );
+							el.find( '#' + e.target.getAttribute( 'data-id' ) + '-transparency' ).removeAttr( 'checked' );
 						},
 						clear: function( e, ui ) {
 							e = null;

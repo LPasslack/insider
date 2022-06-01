@@ -69,7 +69,7 @@ if ( ! class_exists( 'Redux_Options_Constructor', false ) ) {
 			foreach ( $sections as $key => $section ) {
 				if ( 'fields' === $key ) {
 					foreach ( $section as $field ) {
-						if ( ! empty( $field['id'] ) && ! empty( $field['data'] ) && ! empty( $options_values[ $field['id'] ] ) && Redux_Helpers::is_integer( $options_values[ $field['id'] ] ) ) {
+						if ( ! empty( $field['id'] ) && ! empty( $field['data'] ) && ! empty( $options_values[ $field['id'] ] ) && \Redux_Helpers::is_integer( $options_values[ $field['id'] ] ) ) {
 							$options_values[ $field['id'] ] = apply_filters( 'wpml_object_id', $options_values[ $field['id'] ], $field['data'], true );
 						}
 					}
@@ -266,7 +266,7 @@ if ( ! class_exists( 'Redux_Options_Constructor', false ) ) {
 			}
 
 			if ( empty( $core->options_defaults ) ) {
-				$core->options_defaults = $core->default_values();
+				$core->options_defaults = $core->_default_values();
 			}
 
 			$run_update = false;
@@ -314,7 +314,7 @@ if ( ! class_exists( 'Redux_Options_Constructor', false ) ) {
 					if ( ! Redux_Helpers::current_user_can( $section['permissions'] ) ) {
 						$core->hidden_perm_sections[] = $section['title'];
 
-						foreach ( $section['fields'] as $field_data ) {
+						foreach ( $section['fields'] as $num => $field_data ) {
 							$field_type = $field_data['type'];
 
 							if ( 'section' !== $field_type || 'divide' !== $field_type || 'info' !== $field_type || 'raw' !== $field_type ) {
@@ -538,6 +538,7 @@ if ( ! class_exists( 'Redux_Options_Constructor', false ) ) {
 						if ( ! isset( $field['class'] ) ) { // No errors please.
 							$field['class'] = '';
 						}
+						$id = $field['id'];
 
 						/**
 						 * Filter 'redux/options/{opt_name}/field/{field.id}'.
@@ -677,7 +678,7 @@ if ( ! class_exists( 'Redux_Options_Constructor', false ) ) {
 		 * @access      public
 		 * @return      array $this->options_defaults
 		 */
-		public function default_values(): array {
+		public function default_values() {
 			$core = $this->core();
 
 			if ( ! is_null( $core->sections ) && is_null( $core->options_defaults ) ) {
@@ -790,7 +791,7 @@ if ( ! class_exists( 'Redux_Options_Constructor', false ) ) {
 				if ( in_array( $core->args['database'], array( 'transient', 'theme_mods', 'theme_mods_expanded', 'network' ), true ) ) {
 					$this->set( $plugin_options );
 
-					return null;
+					return;
 				}
 
 				$plugin_options = wp_parse_args( $imported_options, $plugin_options );
@@ -835,7 +836,7 @@ if ( ! class_exists( 'Redux_Options_Constructor', false ) ) {
 				return $plugin_options;
 			}
 
-			// Section reset to default.
+			// Section reset to defaults.
 			if ( ! empty( $plugin_options['defaults-section'] ) ) {
 				if ( isset( $plugin_options['redux-section'] ) && isset( $core->sections[ $plugin_options['redux-section'] ]['fields'] ) ) {
 					if ( empty( $core->options_defaults ) ) {
@@ -950,7 +951,7 @@ if ( ! class_exists( 'Redux_Options_Constructor', false ) ) {
 			unset( $plugin_options['defaults'], $plugin_options['defaults_section'], $plugin_options['import'], $plugin_options['import_code'], $plugin_options['import_link'], $plugin_options['compiler'], $plugin_options['redux-section'] );
 			if ( in_array( $core->args['database'], array( 'transient', 'theme_mods', 'theme_mods_expanded' ), true ) ) {
 				$core->set( $core->args['opt_name'], $plugin_options );
-				return null;
+				return;
 			}
 
 			if ( defined( 'WP_CACHE' ) && WP_CACHE && class_exists( 'W3_ObjectCache' ) && function_exists( 'w3_instance' ) ) {

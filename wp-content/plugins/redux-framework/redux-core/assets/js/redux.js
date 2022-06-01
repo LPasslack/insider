@@ -1746,12 +1746,12 @@ function redux_hook( object, functionName, callback, before ) {
 		switch ( operation ) {
 			case '=':
 			case 'equals':
-				if ( Array.isArray( parentValue ) ) {
+				if ( $.isArray( parentValue ) ) {
 					$( parentValue[0] ).each(
 						function( idx, val ) {
 							idx = null;
 
-							if ( Array.isArray( checkValue ) ) {
+							if ( $.isArray( checkValue ) ) {
 								$( checkValue ).each(
 									function( i, v ) {
 										i = null;
@@ -1772,7 +1772,7 @@ function redux_hook( object, functionName, callback, before ) {
 						}
 					);
 				} else {
-					if ( Array.isArray( checkValue ) ) {
+					if ( $.isArray( checkValue ) ) {
 						$( checkValue ).each(
 							function( i, v ) {
 								i = null;
@@ -1792,12 +1792,12 @@ function redux_hook( object, functionName, callback, before ) {
 
 			case '!=':
 			case 'not':
-				if ( Array.isArray( parentValue ) ) {
+				if ( $.isArray( parentValue ) ) {
 					$( parentValue[0] ).each(
 						function( idx, val ) {
 							idx = null;
 
-							if ( Array.isArray( checkValue ) ) {
+							if ( $.isArray( checkValue ) ) {
 								$( checkValue ).each(
 									function( i, v ) {
 										i = null;
@@ -1819,7 +1819,7 @@ function redux_hook( object, functionName, callback, before ) {
 						}
 					);
 				} else {
-					if ( Array.isArray( checkValue ) ) {
+					if ( $.isArray( checkValue ) ) {
 						$( checkValue ).each(
 							function( i, v ) {
 								i = null;
@@ -1886,7 +1886,7 @@ function redux_hook( object, functionName, callback, before ) {
 					);
 				}
 
-				if ( Array.isArray( checkValue ) ) {
+				if ( $.isArray( checkValue ) ) {
 					$( checkValue ).each(
 						function( idx, val ) {
 							var breakMe = false;
@@ -1947,7 +1947,7 @@ function redux_hook( object, functionName, callback, before ) {
 					checkValue = arr;
 				}
 
-				if ( Array.isArray( checkValue ) ) {
+				if ( $.isArray( checkValue ) ) {
 					$( checkValue ).each(
 						function( idx, val ) {
 							idx = null;

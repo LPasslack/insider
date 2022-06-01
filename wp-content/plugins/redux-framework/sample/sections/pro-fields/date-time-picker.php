@@ -36,19 +36,19 @@ Redux::set_section(
 				'control-type'  => 'slider',
 				'timezone-list' => array(
 					array(
-						'value' => '-300',
+						'value' => 'EST',
 						'label' => 'Eastern',
 					),
 					array(
-						'value' => '-360',
+						'value' => 'CST',
 						'label' => 'Central',
 					),
 					array(
-						'value' => '-420',
-						'label' => 'Mountain',
+						'value' => 'GMT',
+						'label' => 'Moutain',
 					),
 					array(
-						'value' => '-480',
+						'value' => 'PST',
 						'label' => 'Pacific',
 					),
 				),

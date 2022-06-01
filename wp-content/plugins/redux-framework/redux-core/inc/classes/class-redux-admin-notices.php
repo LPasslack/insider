@@ -44,7 +44,7 @@ if ( ! class_exists( 'Redux_Admin_Notices', false ) ) {
 		}
 
 		/**
-		 * Display notices stored in notices array.
+		 * Display nices stored in notices array.
 		 *
 		 * @access public
 		 */
@@ -94,11 +94,11 @@ if ( ! class_exists( 'Redux_Admin_Notices', false ) ) {
 		 * @access      public
 		 */
 		public function admin_notices( array $notices = array() ) {
-			global $current_user;
+			global $current_user, $pagenow;
 
 			$core = $this->core();
 			if ( isset( $_GET ) && isset( $_GET['page'] ) && $core->args['page_slug'] === $_GET['page'] ) { // phpcs:ignore WordPress.Security.NonceVerification
-				// do_action( 'redux_admin_notices_run', $core->args );
+				do_action( 'redux_admin_notices_run', $core->args );
 
 				// Check for an active admin notice array.
 				if ( ! empty( $notices ) ) {
@@ -118,8 +118,6 @@ if ( ! class_exists( 'Redux_Admin_Notices', false ) ) {
 
 								if ( ! get_user_meta( $userid, 'ignore_' . $notice['id'] ) ) {
 									global $wp_version;
-
-									$css_id = '';
 
 									// Print the notice with the dismiss link.
 									if ( version_compare( $wp_version, '4.2', '>' ) ) {
@@ -177,7 +175,7 @@ if ( ! class_exists( 'Redux_Admin_Notices', false ) ) {
 		private function dismiss_admin_notice() {
 			global $current_user;
 
-			// Verify the dismiss notice and id parameters are present.
+			// Verify the dismiss and id parameters are present.
 			if ( isset( $_GET['dismiss'] ) && isset( $_GET['id'] ) ) {
 				if ( isset( $_GET['nonce'] ) && wp_verify_nonce( sanitize_key( wp_unslash( $_GET['nonce'] ) ), 'redux_hint_toggle' ) ) {
 					if ( 'true' === $_GET['dismiss'] || 'false' === $_GET['dismiss'] ) {
@@ -216,7 +214,7 @@ if ( ! class_exists( 'Redux_Admin_Notices', false ) ) {
 				// Get the user id.
 				$userid = $current_user->ID;
 
-				if ( ! isset( $_POST['nonce'] ) || ( ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), $id . $userid . 'nonce' ) ) ) {
+				if ( ! isset( $_POST['nonce'] ) || ( isset( $_POST['nonce'] ) && ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), $id . $userid . 'nonce' ) ) ) {
 					die( 0 );
 				} else {
 					// Add the dismiss request to the user meta.

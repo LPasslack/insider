@@ -158,13 +158,11 @@ class Client {
 
 			list( $this->slug, $mainfile) = explode( '/', $this->basename );
 
-			// require_once ABSPATH . 'wp-admin/includes/plugin.php';
+			require_once ABSPATH . 'wp-admin/includes/plugin.php';
 
-			$version = get_file_data($this->file, array('version' => 'Version'));
+			$plugin_data = get_plugin_data( $this->file );
 
-			// $plugin_data = get_plugin_data( $this->file );
-
-			$this->project_version = $version; // $plugin_data['Version'];
+			$this->project_version = $plugin_data['Version'];
 			$this->type            = 'plugin';
 			$this->textdomain      = $this->slug;
 

@@ -209,13 +209,13 @@
 }
 
 .redux-banner-container-top-text + .redux-banner-inner-container .notice-dismiss::before {
-  color: #000000;
+  color: #fff;
 }
 
 .redux-banner-container-top-text {
   padding: 15px 35px 25px 15px;
-  background-color: #CBC3F5;
-  color: #000000;
+  background-color: #24b0a6;
+  color: #fff;
   display: flex;
   align-items: baseline;
 }
@@ -234,7 +234,7 @@
   }
 }
 .redux-banner-container-top-text svg path {
-  fill: #000000;
+  fill: #fff;
 }
 
 .redux-banner-container-top-text span {
@@ -266,6 +266,7 @@
 }
 
 .redux-banner-content-container {
+  width: 1250px;
   position: relative;
   padding: 2rem;
   z-index: 0;
@@ -499,14 +500,6 @@ img.redux-banner-logo {
   width: 50px;
   height: auto;
   margin-bottom: 10px;
-}
-
-.redux-connection-banner-action.disabled {
-  color: currentColor;
-  cursor: not-allowed;
-  opacity: 0.5;
-  text-decoration: none;
-  pointer-events: none;
 }
 
 /*# sourceMappingURL=redux-banner.css.map */

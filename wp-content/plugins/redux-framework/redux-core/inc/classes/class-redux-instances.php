@@ -31,7 +31,7 @@ if ( ! class_exists( 'Redux_Instances', false ) ) {
 		 *
 		 * @param  string|false $opt_name the defined opt_name.
 		 *
-		 * @return ReduxFramework|Redux_Instances class instance
+		 * @return ReduxFramework class instance
 		 */
 		public static function get_instance( $opt_name = false ) {
 
@@ -56,7 +56,7 @@ if ( ! class_exists( 'Redux_Instances', false ) ) {
 		/**
 		 * Get all instantiated ReduxFramework instances (so far)
 		 *
-		 * @return array|null [type] [description]
+		 * @return [type] [description]
 		 */
 		public static function get_all_instances(): ?array {
 			return self::$instances;

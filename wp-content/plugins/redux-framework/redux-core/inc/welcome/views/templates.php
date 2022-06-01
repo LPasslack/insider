@@ -40,7 +40,6 @@ defined( 'ABSPATH' ) || exit;
 			<?php settings_fields( 'redux_templates' ); ?>
 			<table class="form-table">
 				<tbody>
-				<?php if ( ! Redux_Functions_Ex::is_plugin_active( 'extendify' ) ) { ?>
 				<tr style='vertical-align:top'>
 					<th scope='row' style='vertical-align:top'>
 						<?php esc_html_e( 'Extendify Template Library', 'redux-framework' ); ?>
@@ -50,7 +49,6 @@ defined( 'ABSPATH' ) || exit;
 						<label class="description" for="use_extendify_templates"><?php esc_html_e( 'Load Extendify template library', 'redux-framework' ); ?></label>
 					</td>
 				</tr>
-				<?php } ?>
 				<tr style='vertical-align:top'>
 					<th scope="row" style="vertical-align:top">
 						<?php esc_html_e( 'Redux Template Library', 'redux-framework' ); ?>

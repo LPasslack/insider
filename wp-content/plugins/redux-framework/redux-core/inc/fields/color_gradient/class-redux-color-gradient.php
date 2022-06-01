@@ -20,7 +20,7 @@ if ( ! class_exists( 'Redux_Color_Gradient', false ) ) {
 	class Redux_Color_Gradient extends Redux_Field {
 
 		/**
-		 * Filters enabled flag.
+		 * Fileters enabled flag.
 		 *
 		 * @var bool
 		 */
@@ -29,11 +29,9 @@ if ( ! class_exists( 'Redux_Color_Gradient', false ) ) {
 		/**
 		 * Redux_Field constructor.
 		 *
-		 * @param array  $field  Field array.
-		 * @param string $value  Field values.
+		 * @param array  $field Field array.
+		 * @param string $value Field values.
 		 * @param null   $parent ReduxFramework object pointer.
-		 *
-		 * @throws ReflectionException Reflection.
 		 */
 		public function __construct( $field = array(), $value = null, $parent = null ) { // phpcs:ignore Generic.CodeAnalysis.UselessOverridingMethod
 			parent::__construct( $field, $value, $parent );
@@ -99,7 +97,7 @@ if ( ! class_exists( 'Redux_Color_Gradient', false ) ) {
 				'to',
 			);
 
-			foreach ( $mode_arr as $mode ) {
+			foreach ( $mode_arr as $idx => $mode ) {
 				$uc_mode = ucfirst( $mode );
 
 				echo '<div class="colorGradient ' . esc_html( $mode ) . 'Label">';
@@ -112,6 +110,11 @@ if ( ! class_exists( 'Redux_Color_Gradient', false ) ) {
 				echo 'class="color-picker redux-color redux-color-init ' . esc_attr( $this->field['class'] ) . '"';
 				echo 'type="text"';
 				echo 'data-default-color="' . esc_attr( $this->field['default'][ $mode ] ) . '"';
+
+				$data = array(
+					'field' => $this->field,
+					'value' => $this->value,
+				);
 
 				// Escaping done in function.
 				// phpcs:ignore WordPress.Security.EscapeOutput

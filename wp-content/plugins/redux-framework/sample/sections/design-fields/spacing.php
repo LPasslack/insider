@@ -19,7 +19,7 @@ Redux::set_section(
 			array(
 				'id'            => 'opt-spacing',
 				'type'          => 'spacing',
-				'output'        => array( '.site-header, header' ),
+				'output'        => array( '.site-header' ),
 
 				// absolute, padding, margin, defaults to padding.
 				'mode'          => 'margin',

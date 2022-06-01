@@ -30,7 +30,7 @@
 				$el.text( $el.data( 'copied' ) );
 				setTimeout(
 					function() {
-						$el.text( $el.data( 'copy' ) ).removeClass( 'disabled' ).prop( 'disabled', false );
+						$el.text( $el.data( 'copy' ) ).removeClass( 'disabled' ).removeAttr( 'disabled' );
 					},
 					2000
 				);
@@ -65,8 +65,7 @@
 
 				el.each(
 					function() {
-						$( '#redux-import' ).on(
-							'click',
+						$( '#redux-import' ).click(
 							function( e ) {
 								if ( '' === $( '#import-code-value' ).val() && '' === $( '#import-link-value' ).val() ) {
 									e.preventDefault();
@@ -75,11 +74,10 @@
 							}
 						);
 
-						$( this ).find( '#redux-import-code-button' ).on(
-							'click',
+						$( this ).find( '#redux-import-code-button' ).click(
 							function() {
 								var $el = $( '#redux-import-code-wrapper' );
-								if ( $el.is( ':visible' ) ) {
+								if ( $( '#redux-import-link-wrapper' ).is( ':visible' ) ) {
 									$( '#import-link-value' ).val( '' );
 									$( '#redux-import-link-wrapper' ).fadeOut(
 										'fast',
@@ -87,7 +85,7 @@
 											$el.fadeIn(
 												'fast',
 												function() {
-													$( '#import-code-value' ).trigger( 'focus' );
+													$( '#import-code-value' ).focus();
 												}
 											);
 										}
@@ -99,7 +97,7 @@
 										$el.fadeIn(
 											'medium',
 											function() {
-												$( '#import-code-value' ).trigger( 'focus' );
+												$( '#import-code-value' ).focus();
 											}
 										);
 									}
@@ -114,7 +112,7 @@
 
 								if ( !! window.onbeforeunload ) {
 									if ( confirm( ImportExport.unchanged_values ) ) {
-										$( '#redux_top_save' ).on( 'click' );
+										$( '#redux_top_save' ).click();
 										setTimeout(
 											function() {
 												window.open( $( this ).attr( 'href' ) );
@@ -131,7 +129,7 @@
 						$( this ).find( '#redux-import-upload' ).on(
 							'click',
 							function() {
-								$( '#redux-import-upload-file' ).trigger( 'click' );
+								$( '#redux-import-upload-file' ).click();
 							}
 						);
 
@@ -161,7 +159,7 @@
 								e.preventDefault();
 								if ( !! window.onbeforeunload ) {
 									if ( confirm( ImportExport.unchanged_values ) ) {
-										$( '#redux_top_save' ).trigger( 'click' );
+										$( '#redux_top_save' ).click();
 										setTimeout(
 											function() {
 												redux.field_objects.import_export.get_options( $secret, $el );

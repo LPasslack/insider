@@ -72,7 +72,7 @@ if ( ! class_exists( 'Redux_Field', false ) ) {
 					$value = wp_json_encode( $value );
 				}
 
-				$output .= sprintf( true === $value ? ' %1$s' : ' %1$s="%2$s"', $key, esc_attr( $value ) );
+				$output .= sprintf( true === $value ? ' %s' : ' %s="%s"', $key, esc_attr( $value ) );
 			}
 
 			return $output;
@@ -144,21 +144,7 @@ if ( ! class_exists( 'Redux_Field', false ) ) {
 		 *
 		 * @var string|array
 		 */
-		public $field;
-
-		/**
-		 * Value values.
-		 *
-		 * @var string|array
-		 */
 		public $value;
-
-		/**
-		 * Select2 options.
-		 *
-		 * @var array
-		 */
-		public $select2_config = array();
 
 		/**
 		 * Redux_Field constructor.
@@ -196,7 +182,7 @@ if ( ! class_exists( 'Redux_Field', false ) ) {
 		}
 
 		/**
-		 * Retrieve dirname.
+		 * Retrive dirname.
 		 *
 		 * @return string
 		 */
@@ -214,7 +200,7 @@ if ( ! class_exists( 'Redux_Field', false ) ) {
 			$css       = '';
 
 			if ( isset( $query_arr['queries'] ) ) {
-				foreach ( $query_arr['queries'] as $query ) {
+				foreach ( $query_arr['queries'] as $idx => $query ) {
 					$rule      = $query['rule'] ?? '';
 					$selectors = $query['selectors'] ?? array();
 

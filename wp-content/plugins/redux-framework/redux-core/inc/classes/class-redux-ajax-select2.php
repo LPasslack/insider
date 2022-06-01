@@ -52,6 +52,7 @@ if ( ! class_exists( 'Redux_AJAX_Select2', false ) ) {
 						)
 					);
 
+					$criteria = '';
 					if ( isset( $_REQUEST['q'] ) && ! empty( $_REQUEST['q'] ) ) {
 						$criteria  = sanitize_text_field( wp_unslash( $_REQUEST['q'] ) );
 						$args['s'] = $criteria;

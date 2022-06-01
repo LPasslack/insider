@@ -1,4 +1,4 @@
-/* global jQuery, reduxSearch */
+/* global jQuery, reduxsearch */
 
 (function( $ ) {
 	$( document ).ready(
@@ -6,7 +6,7 @@
 			$( '.redux-container' ).each(
 				function( ) {
 					if ( ! $( this ).hasClass( 'redux-no-sections' ) ) {
-						$( this ).find( '.redux-main' ).prepend( '<input class="redux_field_search" type="text" placeholder="' + reduxSearch.search + '"/>' );
+						$( this ).find( '.redux-main' ).prepend( '<input class="redux_field_search" type="text" placeholder="' + reduxsearch.search + '"/>' );
 					}
 				}
 			);
@@ -15,14 +15,16 @@
 				'keypress',
 				function( evt ) {
 
-					// Determine where our character code is coming from within the event.
+					// Deterime where our character code is coming from within the event.
 					var charCode = evt.charCode || evt.keyCode;
 
 					if ( 13 === charCode ) { // Enter key's keycode.
 						return false;
 					}
 				}
-			).typeWatch(
+			);
+
+			$( '.redux_field_search' ).typeWatch(
 				{
 					callback: function( searchString ) {
 						var searchArray;

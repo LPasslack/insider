@@ -66,7 +66,7 @@
 						change: function( e, ui ) {
 							$( this ).val( ui.color.toString() );
 							redux_change( $( this ) );
-							$( '#' + e.target.id + '-transparency' ).prop( 'checked', false );
+							$( '#' + e.target.id + '-transparency' ).removeAttr( 'checked' );
 							redux.field_objects.background.preview( $( this ) );
 						},
 
@@ -88,7 +88,7 @@
 						if ( 'transparent' === value ) {
 							$( this ).parent().parent().find( '.wp-color-result' ).css( 'background-color', 'transparent' );
 
-							el.find( id + '-transparency' ).prop( 'checked', true );
+							el.find( id + '-transparency' ).attr( 'checked', 'checked' );
 						} else {
 							if ( colorValidate( this ) === value ) {
 								if ( 0 !== value.indexOf( '#' ) ) {
@@ -96,7 +96,7 @@
 								}
 							}
 
-							el.find( id + '-transparency' ).prop( 'checked', false );
+							el.find( id + '-transparency' ).removeAttr( 'checked' );
 						}
 					}
 				);
@@ -117,9 +117,9 @@
 
 						if ( 'transparent' === value ) {
 							$( this ).parent().parent().find( '.wp-color-result' ).css( 'background-color', 'transparent' );
-							el.find( id + '-transparency' ).prop( 'checked', true );
+							el.find( id + '-transparency' ).attr( 'checked', 'checked' );
 						} else {
-							el.find( id + '-transparency' ).prop( 'checked', false );
+							el.find( id + '-transparency' ).removeAttr( 'checked' );
 
 							if ( color && color !== $( this ).val() ) {
 								$( this ).val( color );

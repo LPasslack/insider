@@ -98,7 +98,7 @@ if ( ! class_exists( 'Redux_Enqueue', false ) ) {
 			}
 
 			$this->register_styles( $core );
-			$this->register_scripts();
+			$this->register_scripts( $core );
 
 			add_thickbox();
 
@@ -181,6 +181,8 @@ if ( ! class_exists( 'Redux_Enqueue', false ) ) {
 			// *****************************************************************
 			// Spectrum CSS
 			// *****************************************************************
+			$css_file = 'redux-spectrum.css';
+
 			wp_register_style(
 				'redux-spectrum-css',
 				Redux_Core::$url . "assets/css/vendor/spectrum$this->min.css",
@@ -196,23 +198,6 @@ if ( ! class_exists( 'Redux_Enqueue', false ) ) {
 				Redux_Core::$url . "assets/css/vendor/elusive-icons$this->min.css",
 				array(),
 				$this->timestamp
-			);
-
-			// *****************************************************************
-			// Font Awesome for Social Profiles and Icon Select
-			// *****************************************************************
-			wp_register_style(
-				'font-awesome',
-				Redux_Core::$url . 'assets/font-awesome/css/all.min.css',
-				array(),
-				'6.1.1'
-			);
-
-			wp_register_style(
-				'font-awesome-4-shims',
-				Redux_Core::$url . 'assets/font-awesome/css/v4-shims.min.css',
-				array(),
-				'6.1.1'
 			);
 
 			// *****************************************************************
@@ -273,8 +258,10 @@ if ( ! class_exists( 'Redux_Enqueue', false ) ) {
 
 		/**
 		 * Register all core framework scripts.
+		 *
+		 * @param     object $core ReduxFramework object.
 		 */
-		private function register_scripts() {
+		private function register_scripts( $core ) {
 			// *****************************************************************
 			// JQuery / JQuery UI JS
 			// *****************************************************************
@@ -468,8 +455,7 @@ if ( ! class_exists( 'Redux_Enqueue', false ) ) {
 						}
 
 						if ( method_exists( $field_class, 'localize' ) ) {
-							$the_field->localize( $field );
-
+							$params = $the_field->localize( $field );
 							if ( ! isset( $this->localize_data[ $field['type'] ] ) ) {
 								$this->localize_data[ $field['type'] ] = array();
 							}
@@ -500,6 +486,8 @@ if ( ! class_exists( 'Redux_Enqueue', false ) ) {
 		 * @param     object $core ReduxFramework object.
 		 */
 		private function enqueue_fields( $core ) {
+			$data = array();
+
 			foreach ( $core->sections as $section ) {
 				if ( isset( $section['fields'] ) ) {
 					foreach ( $section['fields'] as $field ) {
@@ -541,7 +529,7 @@ if ( ! class_exists( 'Redux_Enqueue', false ) ) {
 		}
 
 		/**
-		 * Compile panel errors and wearings for localize array.
+		 * Compile panel errors and warings for locaize array.
 		 */
 		public function get_warnings_and_errors_array() {
 			$core = $this->core();

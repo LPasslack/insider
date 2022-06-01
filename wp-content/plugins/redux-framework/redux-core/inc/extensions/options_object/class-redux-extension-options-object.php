@@ -43,12 +43,12 @@ if ( ! class_exists( 'Redux_Extension_Options_Object', false ) ) {
 		public $is_field = false;
 
 		/**
-		 * Class Constructor. Defines the args for the extensions class
+		 * Class Constructor. Defines the args for the extions class
 		 *
 		 * @since       1.0.0
 		 * @access      public
 		 *
-		 * @param       object $parent Redux object.
+		 * @param       array $parent Redux object.
 		 *
 		 * @return      void
 		 */
@@ -64,7 +64,7 @@ if ( ! class_exists( 'Redux_Extension_Options_Object', false ) ) {
 		}
 
 		/**
-		 * Add section to panel.
+		 * Add sectio to panel.
 		 */
 		public function add_section() {
 			$this->parent->sections[] = array(

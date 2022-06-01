@@ -63,8 +63,10 @@ if ( ! class_exists( 'Redux_Shortcodes' ) ) {
 
 		/**
 		 * Redux_Shortcodes constructor.
+		 *
+		 * @param object $parent ReduxFramework pointer.
 		 */
-		public function __construct(  ) {
+		public function __construct( $parent ) {
 			if ( ! shortcode_exists( 'bloginfo' ) ) {
 				add_shortcode( 'bloginfo', array( $this, 'blog_info' ) );
 			} else {
@@ -88,17 +90,17 @@ if ( ! class_exists( 'Redux_Shortcodes' ) ) {
 		/**
 		 * Get shortcode data.
 		 *
-		 * @param array|string $atts    Attributes.
-		 * @param string|null  $content Content.
+		 * @param array $atts    Attributes.
+		 * @param null  $content Content.
 		 *
 		 * @return bool|string|void|null
 		 */
-		public function blog_info( $atts = array(), string $content = null ) {
-			if ( ! is_array( $atts ) ) {
-				$atts = array();
-			}
-
+		public function blog_info( array $atts = array(), $content = null ) {
 			if ( ! empty( $content ) && ! isset( $atts['data'] ) ) {
+				if ( ! is_array( $atts ) ) {
+					$atts = array();
+				}
+
 				$atts['data'] = $content;
 			}
 
@@ -142,21 +144,21 @@ if ( ! class_exists( 'Redux_Shortcodes' ) ) {
 		/**
 		 * Get theme info.
 		 *
-		 * @param array|string $atts    Attributes.
-		 * @param string|null  $content Content.
+		 * @param array $atts    Attributes.
+		 * @param null  $content Content.
 		 *
 		 * @return array|bool|string
 		 */
-		public function theme_info( array $atts = array(), string $content = null ) {
-			if ( ! is_array( $atts ) ) {
-				$atts = array();
-			}
-
+		public function theme_info( array $atts = array(), $content = null ) {
 			if ( ! empty( $content ) && ! isset( $atts['data'] ) ) {
+				if ( ! is_array( $atts ) ) {
+					$atts = array();
+				}
+
 				$atts['data'] = $content;
 			}
 
-			if ( empty( $this->theme_info ) ) {
+			if ( ! isset( $this->theme_info ) || empty( $this->theme_info ) ) {
 				$this->theme_info = wp_get_theme();
 			}
 
@@ -183,7 +185,7 @@ if ( ! class_exists( 'Redux_Shortcodes' ) ) {
 
 			switch ( $atts['data'] ) {
 				case 'is_child':
-					return Redux_Helpers::is_child_theme( get_template_directory() );
+					return is_child_theme();
 				default:
 					$return = $this->theme_info->get( $atts['data'] );
 
@@ -198,21 +200,21 @@ if ( ! class_exists( 'Redux_Shortcodes' ) ) {
 		/**
 		 * Get date info.
 		 *
-		 * @param array|string $atts    Attributes.
-		 * @param string|null  $content Content.
+		 * @param array $atts Attributes.
+		 * @param null  $content Content.
 		 *
 		 * @return false|string
 		 */
-		public function date( $atts = array(), string $content = null ) {
-			if ( ! is_array( $atts ) ) {
-				$atts = array();
-			}
-
+		public function date( array $atts = array(), $content = null ) {
 			if ( ! empty( $content ) && ! isset( $atts['data'] ) ) {
+				if ( ! is_array( $atts ) ) {
+					$atts = array();
+				}
+
 				$atts['data'] = $content;
 			}
 
-			if ( empty( $atts['data'] ) ) {
+			if ( ! isset( $atts['data'] ) || empty( $atts['data'] ) ) {
 				$atts['data'] = 'Y';
 			}
 

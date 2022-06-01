@@ -178,8 +178,8 @@ jQuery.uaMatch = function( ua ) {
 						input = _this.element[0];
 						dir   = upButton === this ? 1 : - 1;
 
-						input.trigger( 'focus' );
-						input.trigger( 'select' );
+						input.focus();
+						input.select();
 
 						$( this ).addClass( active );
 

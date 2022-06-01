@@ -26,21 +26,21 @@ if ( ! class_exists( 'Redux_Core', false ) ) {
 		/**
 		 * Project version
 		 *
-		 * @var string
+		 * @var project string
 		 */
 		public static $version;
 
 		/**
 		 * Project directory.
 		 *
-		 * @var string.
+		 * @var project string.
 		 */
 		public static $dir;
 
 		/**
 		 * Project URL.
 		 *
-		 * @var string.
+		 * @var project URL.
 		 */
 		public static $url;
 
@@ -129,7 +129,7 @@ if ( ! class_exists( 'Redux_Core', false ) ) {
 		public static $server = null;
 
 		/**
-		 * Pointer to the third party fixes class.
+		 * Pointer to the thirdparty fixes class.
 		 *
 		 * @var null
 		 */
@@ -157,14 +157,14 @@ if ( ! class_exists( 'Redux_Core', false ) ) {
 		public static $insights = null;
 
 		/**
-		 * Flag for Redux Template enabled status.
+		 * Flag for Redux Template snables status.
 		 *
 		 * @var bool
 		 */
 		public static $redux_templates_enabled = false;
 
 		/**
-		 * Flag for Extendify Template enabled status.
+		 * Flag for Extendify Template snables status.
 		 *
 		 * @var bool
 		 */
@@ -328,18 +328,43 @@ if ( ! class_exists( 'Redux_Core', false ) ) {
 
 			// phpcs:ignore WordPress.NamingConventions.ValidHookName
 			self::$upload_url = apply_filters( 'redux/upload_url', self::$upload_url );
+
+			self::load_template_libraries();
 		}
 
 		/**
 		 * Code to execute on framework __construct.
 		 *
 		 * @param object $parent Pointer to ReduxFramework object.
+		 * @param array  $args   Global arguments array.
 		 */
-		public static function core_construct( $parent ) {
+		public static function core_construct( $parent, array $args ) {
 			self::$third_party_fixes = new Redux_ThirdParty_Fixes( $parent );
 
 			Redux_ThemeCheck::get_instance();
 
+		}
+
+		/**
+		 * Load Redux and Extendify template libraries.
+		 *
+		 * @return void
+		 */
+		private static function load_template_libraries(){
+			self::$redux_templates_enabled     = (bool) get_option( 'use_redux_templates' );
+			self::$extendify_templates_enabled = (bool) get_option( 'use_extendify_templates', true );
+
+			// Including extendify sdk.
+			if ( true === (bool) get_option( 'use_extendify_templates', true ) ) {
+				if ( file_exists( dirname( __FILE__ ) . '/extendify-sdk/loader.php' ) ) {
+					$GLOBALS['extendify_sdk_partner'] = 'Redux';
+					require_once dirname( __FILE__ ) . '/extendify-sdk/loader.php';
+				}
+			}
+
+			if ( file_exists( dirname( __FILE__ ) . '/redux-templates/redux-templates.php' ) ) {
+				require_once dirname( __FILE__ ) . '/redux-templates/redux-templates.php';
+			}
 		}
 
 		/**
@@ -355,14 +380,14 @@ if ( ! class_exists( 'Redux_Core', false ) ) {
 			require_once dirname( __FILE__ ) . '/inc/classes/class-redux-path.php';
 			require_once dirname( __FILE__ ) . '/inc/classes/class-redux-functions-ex.php';
 			require_once dirname( __FILE__ ) . '/inc/classes/class-redux-helpers.php';
-			// require_once dirname( __FILE__ ) . '/inc/classes/class-redux-enable-gutenberg.php';
+			require_once dirname( __FILE__ ) . '/inc/classes/class-redux-enable-gutenberg.php';
 			require_once dirname( __FILE__ ) . '/inc/classes/class-redux-instances.php';
 			Redux_Functions_Ex::register_class_path( 'Redux', dirname( __FILE__ ) . '/inc/classes' );
 			Redux_Functions_Ex::register_class_path( 'Redux', dirname( __FILE__ ) . '/inc/welcome' );
 			spl_autoload_register( array( $this, 'register_classes' ) );
 
 			self::$welcome = new Redux_Welcome();
-			new Redux_Rest_Api_Builder();
+			new Redux_Rest_Api_Builder( $this );
 
 			add_action( 'admin_init', array( $this, 'admin_init' ) );
 
@@ -371,13 +396,11 @@ if ( ! class_exists( 'Redux_Core', false ) ) {
 		}
 
 		/**
-		 * Add debug info for the WP Site Health screen.
+		 * Add debug infor the WP Site Health screen.
 		 *
 		 * @param array $debug_info Debug data.
 		 *
 		 * @return array
-		 * @noinspection PhpIncludeInspection
-		 * @throws ReflectionException Exception.
 		 */
 		public function add_debug_info( array $debug_info ): array {
 
@@ -415,7 +438,7 @@ if ( ! class_exists( 'Redux_Core', false ) ) {
 						'value' => self::$installed,
 					),
 					'data directory' => array(
-						'label' => esc_html__( 'Data directory', 'redux-framework' ),
+						'label' => esc_html__( 'Data directory', 'redux-framerwork' ),
 						'value' => self::$dir,
 					),
 					'browser'        => array(
@@ -426,8 +449,6 @@ if ( ! class_exists( 'Redux_Core', false ) ) {
 			);
 
 			$redux = Redux::all_instances();
-
-			$extensions = array();
 
 			if ( ! empty( $redux ) && is_array( $redux ) ) {
 				foreach ( $redux as $inst => $data ) {
@@ -563,6 +584,7 @@ if ( ! class_exists( 'Redux_Core', false ) ) {
 
 				$mappings = array(
 					'ReduxFrameworkInstances'  => 'Redux_Instances',
+					'reduxCoreEnqueue'         => '',
 					'reduxCorePanel'           => 'Redux_Panel',
 					'reduxCoreEnqueue'         => 'Redux_Enqueue',
 					'Redux_Abstract_Extension' => 'Redux_Extension_Abstract',
@@ -641,7 +663,7 @@ if ( ! class_exists( 'Redux_Core', false ) ) {
 		/**
 		 * Helper method to check for mb_strtolower or to use the standard strtolower.
 		 *
-		 * @param string|null $str String to make lowercase.
+		 * @param string $str String to make lowercase.
 		 *
 		 * @return string|null
 		 */
