@@ -2,9 +2,9 @@
 defined('ABSPATH') || defined('DUPXABSPATH') || exit;
 ?>
 <!-- ================================================================
-SERVER  -->
+SETUP  -->
 <div class="details-title">
-	<i class="fa fa-hdd-o"></i> <i class="far fa-hdd fa-sm"></i> <?php esc_html_e("Setup", 'duplicator');	?>
+	<i class="fas fa-tasks"></i> <?php esc_html_e("Setup", 'duplicator');	?>
 	<div class="dup-more-details">
 		<a href="?page=duplicator-tools&tab=diagnostics" target="_blank" title="<?php esc_attr_e('Show Diagnostics', 'duplicator');?>"><i class="fa fa-microchip"></i></a>&nbsp;
         <a href="site-health.php" target="_blank" title="<?php esc_attr_e('Check Site Health', 'duplicator');?>"><i class="fas fa-file-medical-alt"></i></a>
@@ -12,8 +12,8 @@ SERVER  -->
 </div>
 
 <!-- ============
-PHP SETTINGS -->
-<div class="scan-item">
+SYSTEM AND WORDPRESS -->
+<div class="scan-item scan-item-first">
 
     <?php
     
@@ -116,8 +116,7 @@ PHP SETTINGS -->
 
 <!-- ============
 WP SETTINGS -->
-<div class="scan-item scan-item-last">
-
+<div class="scan-item">
 
 	<div class="title" onclick="Duplicator.Pack.toggleScanItem(this);">
 		<div class="text"><i class="fa fa-caret-right"></i> <?php esc_html_e('WordPress', 'duplicator');?></div>
@@ -137,7 +136,7 @@ WP SETTINGS -->
                 $filter_text="";
                 if($core_dir_notice) {
                     echo '<small id="data-srv-wp-core-missing-dirs">';
-                       esc_html_e("The core WordPress paths below will <u>not</u> be included in the archive. These paths are required for WordPress to function!");
+                       esc_html_e("The core WordPress paths below will NOT be included in the archive. These paths are required for WordPress to function!", 'duplicator');
                        echo "<br/>";
                        foreach($core_dir_included as $core_dir) {
                            echo '&nbsp; &nbsp; <b><i class="fa fa-exclamation-circle scan-warn"></i>&nbsp;'. $core_dir . '</b><br/>';
@@ -148,7 +147,7 @@ WP SETTINGS -->
 
                 if($core_file_notice) {
                     echo '<small id="data-srv-wp-core-missing-dirs">';
-                       esc_html_e("The core WordPress file below will <u>not</u> be included in the archive. This file is required for WordPress to function!");
+                       esc_html_e("The core WordPress file below will NOT be included in the archive. This file is required for WordPress to function!", 'duplicator');
                        echo "<br/>";
                        foreach($core_files_included as $core_file) {
                             echo '&nbsp; &nbsp; <b><i class="fa fa-exclamation-circle scan-warn"></i>&nbsp;'. $core_file . '</b><br/>';
@@ -202,6 +201,34 @@ WP SETTINGS -->
 		}
 		?>
 	</div>
+</div>
+
+<!-- ======================
+MIGRATION STATUS -->
+<div id="migratepackage-block"  class="scan-item">
+	<div class='title' onclick="Duplicator.Pack.toggleScanItem(this);">
+		<div class="text"><i class="fa fa-caret-right"></i> <?php esc_html_e('Migration Status', 'duplicator');?></div>
+        <div id="data-arc-status-migratepackage"></div>
+	</div>
+    <div class="info">
+        <script id="hb-migrate-package-result" type="text/x-handlebars-template">
+            <div class="container">
+                <div class="data">
+                    {{#if ARC.Status.CanbeMigratePackage}}
+                        <?php esc_html_e("The package created here can be migrated to a new server.", 'duplicator'); ?>
+                    {{else}}
+                        <span style="color: red;">
+                            <?php
+                            esc_html_e("The package created here cannot be migrated to a new server.
+                                The Package created here can be restored on the same server.", 'duplicator');
+                            ?>
+                        </span>
+                    {{/if}}
+                </div>
+            </div>
+        </script>
+        <div id="migrate-package-result"></div>
+    </div>
 </div>
 
 <script>

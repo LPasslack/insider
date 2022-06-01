@@ -9,7 +9,7 @@ class DUP_LITE_Extraction
     const ACTION_REMOVE_WP_FILES    = 'removewpfiles';
     const INPUT_NAME_ARCHIVE_ACTION = 'archive_action';
 
-    public $archive_action                        = self::ACTION_DO_NOTHING;
+    public $archive_action          = self::ACTION_DO_NOTHING;
 
     /**
      *
@@ -35,7 +35,7 @@ class DUP_LITE_Extraction
     }
 
     /**
-     * inizialize extraction data
+     * initialize extraction data
      */
     public function initData()
     {
@@ -199,8 +199,6 @@ class DUP_LITE_Extraction
         unset($POST_LOG['dbpass']);
         ksort($POST_LOG);
 
-
-
         //ACTION VARS
         $ajax1_start       = DUPX_U::getMicrotime();
         $root_path         = $GLOBALS['DUPX_ROOT'];
@@ -249,7 +247,7 @@ class DUP_LITE_Extraction
         }
 
         DUPX_Log::info("********************************************************************************");
-        DUPX_Log::info('* DUPLICATOR-PRO: Install-Log');
+        DUPX_Log::info('* DUPLICATOR-LITE: Install-Log');
         DUPX_Log::info('* STEP-1 START @ '.@date('h:i:s'));
         DUPX_Log::info("* VERSION: {$GLOBALS['DUPX_AC']->version_dup}");
         DUPX_Log::info('* NOTICE: Do NOT post to public sites or forums!!');
@@ -537,7 +535,7 @@ class DUP_LITE_Extraction
         }
 
         $log = "--------------------------------------\n";
-        $log .= "POST-EXTACT-CHECKS\n";
+        $log .= "POST-EXTRACT-CHECKS\n";
         $log .= "--------------------------------------";
         DUPX_Log::info($log);
 
@@ -554,7 +552,8 @@ class DUP_LITE_Extraction
             DUPX_Log::info("    -DIRS:  '{$dir_perms_value}'");
             DUPX_Log::info("    -FILES: '{$file_perms_value}'");
 
-            $objects = new RecursiveIteratorIterator(new IgnorantRecursiveDirectoryIterator($root_path, RecursiveDirectoryIterator::SKIP_DOTS), RecursiveIteratorIterator::SELF_FIRST);
+            $objects = new RecursiveIteratorIterator(
+                new IgnorantRecursiveDirectoryIterator($root_path, RecursiveDirectoryIterator::SKIP_DOTS), RecursiveIteratorIterator::SELF_FIRST);
 
             foreach ($objects as $name => $object) {
                 if ($set_file_perms && is_file($name)) {
@@ -593,8 +592,8 @@ class DUP_LITE_Extraction
 // Skips past paths it can't read
 class IgnorantRecursiveDirectoryIterator extends RecursiveDirectoryIterator
 {
-
-    function getChildren()
+    #[\ReturnTypeWillChange]
+    public function getChildren()
     {
         try {
             return new IgnorantRecursiveDirectoryIterator($this->getPathname(), RecursiveDirectoryIterator::SKIP_DOTS);

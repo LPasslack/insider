@@ -33,7 +33,6 @@ if ( is_dir( $sample_patterns_path ) ) {
 	$sample_patterns_dir = opendir( $sample_patterns_path );
 
 	if ( $sample_patterns_dir ) {
-		$sample_patterns = array();
 
 		// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition
 		while ( false !== ( $sample_patterns_file = readdir( $sample_patterns_dir ) ) ) {
@@ -49,7 +48,7 @@ if ( is_dir( $sample_patterns_path ) ) {
 	}
 }
 
-// Used to execept HTML tags in description arguments where esc_html would remove.
+// Used to except HTML tags in description arguments where esc_html would remove.
 $kses_exceptions = array(
 	'a'      => array(
 		'href' => array(),
@@ -152,7 +151,7 @@ $args = array(
 	// Shows the Import/Export panel when not used as a field.
 	'show_import_export'        => true,
 
-	// The time transinets will expire when the 'database' arg is set.
+	// The time transients will expire when the 'database' arg is set.
 	'transient_time'            => 60 * MINUTE_IN_SECONDS,
 
 	// Global shut-off for dynamic CSS output by the framework. Will also disable google fonts output.
@@ -213,11 +212,12 @@ $args = array(
 	// possible: options, theme_mods, theme_mods_expanded, transient. Not fully functional, warning!
 	'database'                  => '',
 	'network_admin'             => true,
+	'search'                    => true,
 );
 
 
 // ADMIN BAR LINKS -> Setup custom links in the admin bar menu as external items.
-// PLEASE CHANGE THEME BEFORE RELEASEING YOUR PRODUCT!!
+// PLEASE CHANGE THEME BEFORE RELEASING YOUR PRODUCT!!
 // If these are left unchanged, they will not display in your panel!
 $args['admin_bar_links'][] = array(
 	'id'    => 'redux-docs',
@@ -238,7 +238,7 @@ $args['admin_bar_links'][] = array(
 );
 
 // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
-// PLEASE CHANGE THEME BEFORE RELEASEING YOUR PRODUCT!!
+// PLEASE CHANGE THEME BEFORE RELEASING YOUR PRODUCT!!
 // If these are left unchanged, they will not display in your panel!
 $args['share_icons'][] = array(
 	'url'   => '//github.com/ReduxFramework/ReduxFramework',
@@ -507,6 +507,10 @@ Redux::set_section(
 require_once Redux_Core::$dir . '../sample/sections/disabling/disable-field.php';
 require_once Redux_Core::$dir . '../sample/sections/disabling/disable-section.php';
 
+require_once Redux_Core::$dir . '../sample/sections/repeater/repeater.php';
+require_once Redux_Core::$dir . '../sample/sections/search/search.php';
+require_once Redux_Core::$dir . '../sample/sections/shortcodes/shortcodes.php';
+
 // -> START Pro Fields.
 if ( class_exists( 'Redux_Pro' ) ) {
 	Redux::set_section(
@@ -528,9 +532,6 @@ if ( class_exists( 'Redux_Pro' ) ) {
 	require_once Redux_Core::$dir . '../sample/sections/pro-fields/icon-select.php';
 	require_once Redux_Core::$dir . '../sample/sections/pro-fields/js-button.php';
 	require_once Redux_Core::$dir . '../sample/sections/pro-fields/multi-media.php';
-	require_once Redux_Core::$dir . '../sample/sections/pro-fields/repeater.php';
-	require_once Redux_Core::$dir . '../sample/sections/pro-fields/search.php';
-	require_once Redux_Core::$dir . '../sample/sections/pro-fields/shortcodes.php';
 	require_once Redux_Core::$dir . '../sample/sections/pro-fields/social-profiles.php';
 	require_once Redux_Core::$dir . '../sample/sections/pro-fields/taxonomy.php';
 	require_once Redux_Core::$dir . '../sample/sections/pro-fields/users.php';
@@ -607,7 +608,7 @@ Redux::set_section(
 // Change the arguments after they've been declared, but before the panel is created.
 // add_filter('redux/options/' . $opt_name . '/args', 'change_arguments' );
 //
-// Change the default value of a field after it's been set, but before it's been useds.
+// Change the default value of a field after it's been set, but before it's been used.
 // add_filter('redux/options/' . $opt_name . '/defaults', 'change_defaults' );
 //
 // Dynamically add a section. Can be also used to modify sections/fields.
@@ -733,7 +734,7 @@ if ( ! function_exists( 'change_defaults' ) ) {
 
 if ( ! function_exists( 'redux_custom_sanitize' ) ) {
 	/**
-	 * Function to be used if the field santize argument.
+	 * Function to be used if the field sanitize argument.
 	 * Return value MUST be the formatted or cleaned text to display.
 	 *
 	 * @param string $value Value to evaluate or clean.  Required.
