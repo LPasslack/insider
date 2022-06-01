@@ -3,9 +3,9 @@ add_action( 'rsssl_notice_include_alias', 'rsssl_notice_include_alias', 10, 1 );
 function rsssl_notice_include_alias( $args ) {
 	if (!rsssl_is_subdomain() && !RSSSL_LE()->letsencrypt_handler->alias_domain_available() ) {
 		if (strpos(site_url(), 'www.') !== false ) {
-			rsssl_sidebar_notice(  __( "The non-www version of your site does not point to this website. This is recommended, as it will allow you to add it to the certificate as well.", 'complianz-gdpr' ), 'warning' );
+			rsssl_sidebar_notice(  __( "The non-www version of your site does not point to this website. This is recommended, as it will allow you to add it to the certificate as well.", 'really-simple-ssl' ), 'warning' );
 		} else {
-			rsssl_sidebar_notice(  __( "The www version of your site does not point to this website. This is recommended, as it will allow you to add it to the certificate as well.", 'complianz-gdpr' ), 'warning' );
+			rsssl_sidebar_notice(  __( "The www version of your site does not point to this website. This is recommended, as it will allow you to add it to the certificate as well.", 'really-simple-ssl' ), 'warning' );
 		}
 	}
 }
@@ -28,11 +28,8 @@ function rsssl_le_get_notices_list($notices) {
 	$renew_link  = rsssl_letsencrypt_wizard_url();
 	$link_open   = '<a href="' . $renew_link . '">';
 
-	$response = RSSSL_LE()->letsencrypt_handler->search_ssl_installation_url();
-	$url      = $response->output;
-
 	$ssl_generate_url = add_query_arg( array( "page" => "rlrsssl_really_simple_ssl", "tab" => "letsencrypt" ), admin_url( "options-general.php" ) );
-
+	$ssl_download_url = add_query_arg( array( "step" => 6), $ssl_generate_url );
 	if ( rsssl_generated_by_rsssl() ) {
 		if ( $expiry_date ) {
 			$notices['ssl_detected'] = array(
@@ -68,14 +65,14 @@ function rsssl_le_get_notices_list($notices) {
 				),
 				'manual-installation'           => array(
 					'msg'         => sprintf( __( "The SSL certificate has been renewed, and requires manual %sinstallation%s in your hosting dashboard.", "really-simple-ssl" ),
-						'<a target="_blank" href="' . $url . '">', '</a>' ),
+						'<a href="' . $ssl_download_url . '">', '</a>' ),
 					'icon'        => 'open',
 					'plusone'     => true,
 					'dismissible' => false,
 				),
 				'manual-generation'             => array(
 					'msg'         => sprintf( __( "Automatic renewal of your certificate was not possible. The SSL certificate should be %srenewed%s manually.", "really-simple-ssl" ),
-						'<a target="_blank" href="' . $ssl_generate_url . '">', '</a>' ),
+						'<a href="' . $ssl_generate_url . '">', '</a>' ),
 					'icon'        => 'open',
 					'plusone'     => true,
 					'dismissible' => false,

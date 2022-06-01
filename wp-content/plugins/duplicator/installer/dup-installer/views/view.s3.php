@@ -233,37 +233,46 @@ VIEW: STEP 3- INPUT -->
 				</tr>
 			</table><br/>
 
-			<table>
+			<table style="width:100%">
 				<tr>
-					<td style="padding-right:10px">
+					<td style="padding-right:10px;width:50%">
 						<b>Scan Tables:</b>
 						<div class="s3-allnonelinks">
 							<a href="javascript:void(0)" onclick="$('#tables option').prop('selected',true);">[All]</a>
 							<a href="javascript:void(0)" onclick="$('#tables option').prop('selected',false);">[None]</a>
 						</div><br style="clear:both" />
-						<select id="tables" name="tables[]" multiple="multiple" style="width:315px;" size="10">
+						<select id="tables" name="tables[]" multiple="multiple" style="width:100%;" size="10">
 							<?php
 							foreach( $all_tables as $table ) {
 								echo '<option selected="selected" value="' . DUPX_U::esc_attr( $table ) . '">' . DUPX_U::esc_html($table) . '</option>';
 							}
 							?>
 						</select>
-
 					</td>
-					<td valign="top">
+					<td style="width:50%">
 						<b>Activate Plugins:</b>
 						<?php echo ($_POST['exe_safe_mode'] > 0) ? '<small class="s3-warn">Safe Mode Enabled</small>' : '' ; ?>
 						<div class="s3-allnonelinks" style="<?php echo ($_POST['exe_safe_mode']>0)? 'display:none':''; ?>">
 							<a href="javascript:void(0)" onclick="$('#plugins option').prop('selected',true);">[All]</a>
 							<a href="javascript:void(0)" onclick="$('#plugins option').prop('selected',false);">[None]</a>
 						</div><br style="clear:both" />
-						<select id="plugins" name="plugins[]" multiple="multiple" style="width:315px;" <?php echo ($_POST['exe_safe_mode'] > 0) ? 'disabled="true"' : ''; ?> size="10">
+						<select id="plugins" name="plugins[]" multiple="multiple" style="width:100%;"  size="10">
 							<?php
 							$selected_string = 'selected="selected"';
-							foreach ($active_plugins as $plugin) {
-								$label = dirname($plugin) == '.' ? $plugin : dirname($plugin);
-                                echo "<option {$selected_string} value='" . DUPX_U::esc_attr( $plugin ) . "'>" . DUPX_U::esc_html($label) . '</option>';
-							}
+                            if ($_POST['exe_safe_mode'] > 0) {
+                                foreach ($active_plugins as $plugin) {
+                                    if (strpos($plugin, '/duplicator.php') !== false) {
+                                        $label = dirname($plugin) == '.' ? $plugin : dirname($plugin);
+                                        echo "<option {$selected_string} value='" . DUPX_U::esc_attr( $plugin ) . "'>" . DUPX_U::esc_html($label) . '</option>';
+                                        break;
+                                    }
+                                }
+                            } else {
+                                foreach ($active_plugins as $plugin) {
+                                    $label = dirname($plugin) == '.' ? $plugin : dirname($plugin);
+                                    echo "<option {$selected_string} value='" . DUPX_U::esc_attr( $plugin ) . "'>" . DUPX_U::esc_html($label) . '</option>';
+                                }
+                            }
 							?>
 						</select>
 					</td>
@@ -407,7 +416,10 @@ VIEW: STEP 3 - AJAX RESULT  -->
 	<div id="ajaxerr-area" style="display:none">
 		<p>Please try again an issue has occurred.</p>
 		<div style="padding: 0px 10px 10px 10px;">
-			<div id="ajaxerr-data">An unknown issue has occurred with the update setup step.  Please see the <?php DUPX_View_Funcs::installerLogLink(); ?> file for more details.</div>
+			<div id="ajaxerr-data">
+                <b>Overview:</b><br/>
+                An issue has occurred in step 3.  Please see the <?php DUPX_View_Funcs::installerLogLink(); ?> file for more details.
+            </div>
 			<div style="text-align:center; margin:10px auto 0px auto">
 				<input type="button" onclick='DUPX.hideErrorResult2()' value="&laquo; Try Again"  class="default-btn" /><br/><br/>
 				<i style='font-size:11px'>See online help for more details at <a href='https://snapcreek.com' target='_blank'>snapcreek.com</a></i>
@@ -509,17 +521,28 @@ DUPX.runUpdate = function()
 				DUPX.hideProgressBar();
                 return false;
             }
-			if (typeof(data) != 'undefined' && data.step3.pass == 1) {
-				$("#ajax-url_new").val($("#url_new").val());
-				$("#ajax-exe-safe-mode").val($("#exe-safe-mode").val());
-				$("#ajax-json").val(escape(JSON.stringify(data)));
-				<?php if (!DUPX_Log::isLevel(DUPX_Log::LV_DEBUG)) : ?>
-					setTimeout(function(){$('#s3-result-form').submit();}, 1000);
-				<?php endif; ?>
-				$('#progress-area').fadeOut(1800);
-			} else {
-				DUPX.hideProgressBar();
-			}
+
+            try {
+                if (typeof(data) != 'undefined' && data.step3.pass == 1) {
+                    $("#ajax-url_new").val($("#url_new").val());
+                    $("#ajax-exe-safe-mode").val($("#exe-safe-mode").val());
+                    $("#ajax-json").val(escape(JSON.stringify(data)));
+                    <?php if (!DUPX_Log::isLevel(DUPX_Log::LV_DEBUG)) : ?>
+                        setTimeout(function(){$('#s3-result-form').submit();}, 1000);
+                    <?php endif; ?>
+                } else {
+                    if (typeof(data) != 'undefined' && data.step3.pass == -1) {
+                        console.log(data);
+                        let details = (data.step3.error_message.length > 0) ? data.step3.error_message : "No details found.";
+                        $('#ajaxerr-data').append(`<br/><br/><b>Details:</b><br/> ${details}`);
+                    }
+                    DUPX.hideProgressBar();
+                }
+            } catch(err) {
+                console.log(err);
+                DUPX.hideProgressBar();
+            }
+
 		},
 		error: function(xhr) {
 			var status  = "<b>Server Code:</b> "	+ xhr.status		+ "<br/>";
