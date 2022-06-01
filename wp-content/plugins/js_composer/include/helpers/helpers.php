@@ -41,7 +41,7 @@ function wpb_getImageBySize( $params = array() ) {
 	$post_id = $params['post_id'];
 
 	$attach_id = $post_id ? get_post_thumbnail_id( $post_id ) : $params['attach_id'];
-	$attach_id = apply_filters( 'vc_object_id', $attach_id );
+	$attach_id = apply_filters( 'wpml_object_id', $attach_id, 'attachment', true );
 	$thumb_size = $params['thumb_size'];
 	$thumb_class = ( isset( $params['class'] ) && '' !== $params['class'] ) ? $params['class'] . ' ' : '';
 
@@ -56,7 +56,13 @@ function wpb_getImageBySize( $params = array() ) {
 		'full',
 	);
 	if ( is_string( $thumb_size ) && ( ( ! empty( $_wp_additional_image_sizes[ $thumb_size ] ) && is_array( $_wp_additional_image_sizes[ $thumb_size ] ) ) || in_array( $thumb_size, $sizes, true ) ) ) {
-		$attributes = array( 'class' => $thumb_class . 'attachment-' . $thumb_size );
+		$attachment = get_post( $attach_id );
+		$title = trim( wp_strip_all_tags( $attachment->post_title ) );
+		$attributes = array(
+			'class' => $thumb_class . 'attachment-' . $thumb_size,
+			'title' => $title,
+		);
+
 		$thumbnail = wp_get_attachment_image( $attach_id, $thumb_size, false, $attributes );
 	} elseif ( $attach_id ) {
 		if ( is_string( $thumb_size ) ) {
@@ -1416,7 +1422,8 @@ function wpb_widget_title( $params = array( 'title' => '' ) ) {
  * @since 6.3.0
  */
 function wpb_remove_custom_html( $content ) {
-	if ( ! vc_user_access()->part( 'unfiltered_html' )->checkStateAny( true, null )->get() ) {
+	$is_rest_request = ( defined( 'REST_REQUEST' ) && REST_REQUEST );
+	if ( ! empty( $content ) && ! $is_rest_request && ! vc_user_access()->part( 'unfiltered_html' )->checkStateAny( true, null )->get() ) {
 		// html encoded shortcodes
 		$regex = vc_get_shortcode_regex( implode( '|', apply_filters( 'wpb_custom_html_elements', array(
 			'vc_raw_html',
