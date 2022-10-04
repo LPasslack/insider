@@ -4,3 +4,6 @@
 /.htaccess
 /wp-config.php
 /wp-content/themes/twentytwenty/
+/wp-content/plugins/disable-remove-google-fonts/
+/wp-content/cache/wmac/
+/wp-content/plugins/elementor/
