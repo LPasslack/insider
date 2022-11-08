@@ -773,6 +773,10 @@ msgstr ""
 msgid "Post Title Left"
 msgstr ""
 
+#: framework/admin/metaboxes/post.php:53
+msgid "Insider Post Title Left"
+msgstr ""
+
 #: framework/admin/metaboxes/post.php:54
 msgid "No Hero"
 msgstr ""
@@ -1361,6 +1365,10 @@ msgstr ""
 
 #: framework/admin/options/post-settings.php:17
 msgid "Default (Post Title Left Aligned)"
+msgstr ""
+
+#: framework/admin/options/post-settings.php:17
+msgid "Default (Insider Post Title Left Aligned)"
 msgstr ""
 
 #: framework/admin/options/post-settings.php:18

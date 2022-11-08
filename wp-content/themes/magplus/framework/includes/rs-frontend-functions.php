@@ -12,7 +12,7 @@
  * @param string $class
  */
 if(!function_exists('magplus_loader')) {
-  function magplus_loader() { 
+  function magplus_loader() {
     $loader_on_off = magplus_get_opt('general-loader-enable-switch');
     if(!$loader_on_off) { return; }
   ?>
@@ -257,7 +257,7 @@ if ( ! function_exists( 'magplus_paging_nav' ) ) {
 
       if (!empty($links)): ?>
         <div class="text-center">
-           <?php echo wp_kses_post($links); ?>                           
+           <?php echo wp_kses_post($links); ?>
         </div>
         <div class="empty-space marg-sm-b60"></div>
       <?php endif;
@@ -459,7 +459,7 @@ function magplus_comment( $comment, $args, $depth ) {
 
 
 
-            <?php 
+            <?php
               $reply = get_comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => 50 ) ) );
               if (!empty($reply)): ?>
                 <?php echo wp_kses_post($reply); ?>
@@ -537,8 +537,8 @@ if(!function_exists('magplus_related_post')) {
                     <a class="tt-post-title c-h5" href="<?php echo esc_url(get_the_permalink()); ?>"><small><?php the_title(); ?></small></a>
                     <?php magplus_blog_author_date(); ?>
                   </div>
-                </div> 
-                <div class="empty-space marg-lg-b15"></div>                 
+                </div>
+                <div class="empty-space marg-lg-b15"></div>
               </div>
               <div class="clearfix visible-md-block"></div>
 
@@ -548,7 +548,7 @@ if(!function_exists('magplus_related_post')) {
             <div class="empty-space marg-lg-b40 marg-sm-b30"></div>
             <?php
             break;
-          
+
           case 'style2': ?>
             <div class="tt-shortcode-1">
 
@@ -566,13 +566,13 @@ if(!function_exists('magplus_related_post')) {
 
 
                     <div class="tt-post type-7 clearfix">
-                      
+
                       <?php magplus_blog_featured_image('magplus-small-alt', 'img-responsive'); ?>
-                     
+
                       <div class="tt-post-info">
                         <a class="tt-post-title c-h6" href="<?php echo esc_url(get_the_permalink()); ?>"><?php the_title(); ?> </a>
                       </div>
-                    </div> 
+                    </div>
 
 
                   </div>
@@ -580,7 +580,7 @@ if(!function_exists('magplus_related_post')) {
 
 
                 </div>
-              </div>  
+              </div>
 
 
             </div>
@@ -605,7 +605,7 @@ if(!function_exists('magplus_post_author_details')) {
     $curauth = get_userdata($post->post_author);
     if(!empty($curauth->description)): ?>
       <div class="tt-devider"></div>
-      <div class="empty-space marg-lg-b60 marg-sm-b50 marg-xs-b30"></div>     
+      <div class="empty-space marg-lg-b60 marg-sm-b50 marg-xs-b30"></div>
       <div class="tt-author clearfix">
         <a class="tt-author-img" href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' )); ?>">
           <?php echo get_avatar( get_the_author_meta('ID'), 90 ); ?>
@@ -678,7 +678,7 @@ if(!function_exists('magplus_accent_css')) {
     $accent_color_first  = magplus_get_opt('theme-skin-accent-first');
     $output = '';
     if(magplus_get_opt('theme-skin') == 'theme-accent' && !empty($accent_color_first)):
-    $output .= 
+    $output .=
      '.tt-header .main-nav > ul > li:not(.mega) > ul > li > a:hover,
       .tt-header .main-nav > ul > li:not(.mega) > ul > li > ul > li > a:hover,
       .mega.type-2 ul.tt-mega-wrapper li>ul a:hover,
@@ -728,15 +728,15 @@ if(!function_exists('magplus_accent_css')) {
       .widget_price_filter .ui-slider .ui-slider-handle,
       .widget_shopping_cart .buttons .checkout,
       .woocommerce-form-login input[type="submit"],
-      .woocommerce .shop_table .button[name="apply_coupon"], 
-      .woocommerce-page .shop_table .button[name="apply_coupon"], 
+      .woocommerce .shop_table .button[name="apply_coupon"],
+      .woocommerce-page .shop_table .button[name="apply_coupon"],
       .single_add_to_cart_button,
       .woocommerce .shop_table .button[name="update_cart"], .woocommerce-page .shop_table .button[name="update_cart"],
       .woocommerce #payment .button, .woocommerce-page #payment .button, .woocommerce-page .wc-proceed-to-checkout .button {
         background: '.esc_attr($accent_color_first).' !important;
       }
 
-      .ajax_add_to_cart.c-btn.type-2:hover, 
+      .ajax_add_to_cart.c-btn.type-2:hover,
       .product_type_variable.add_to_cart_button.c-btn.type-2:hover,
       .widget_shopping_cart .buttons .checkout:hover,
       .price_slider_amount button[type="submit"]:hover,
@@ -855,7 +855,7 @@ if(!function_exists('magplus_accent_css')) {
       $output .= '}';
       $output .= '}';
     endif;
-    
+
     return $output;
   }
 }
@@ -893,7 +893,7 @@ if(!function_exists('magplus_blog_category')) {
  * @return array
  */
 if(!function_exists('magplus_blog_title')) {
-  function magplus_blog_title($class = 'c-h2', $small = false, $trim = false, $length = 5) { 
+  function magplus_blog_title($class = 'c-h2', $small = false, $trim = false, $length = 5) {
     $title = ($trim) ? wp_trim_words( get_the_title(), $length, '...'):get_the_title();
   ?>
     <a class="tt-post-title <?php echo esc_attr($class); ?>" href="<?php echo esc_url(get_the_permalink()); ?>"><?php if($small): ?><small><?php endif; ?><?php echo wp_kses_post($title); ?><?php if($small): ?></small><?php endif; ?></a>
@@ -940,7 +940,7 @@ if(!function_exists('magplus_blog_excerpt')) {
  * @return array
  */
 if(!function_exists('magplus_blog_post_bottom')) {
-  function magplus_blog_post_bottom($show_comment = 'yes', $show_views = 'yes') { 
+  function magplus_blog_post_bottom($show_comment = 'yes', $show_views = 'yes') {
     $download_url = magplus_get_post_opt('post-download-url');
   ?>
     <?php if($show_comment == 'yes' || $show_views == 'yes'): ?>
@@ -969,7 +969,7 @@ if(!function_exists('magplus_blog_post_bottom')) {
  * @return array
  */
 if(!function_exists('magplus_post_navigation')) {
-  function magplus_post_navigation() { 
+  function magplus_post_navigation() {
 
     $previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
     $next     = get_adjacent_post( false, '', false );
@@ -984,8 +984,8 @@ if(!function_exists('magplus_post_navigation')) {
       <?php if (get_previous_post()): ?>
       <div class="col-sm-6">
         <div class="tt-blog-nav left">
-          <div class="tt-blog-nav-label"><?php echo magplus_get_opt('translation-previous-article'); ?></div>
-          <?php previous_post_link('%link', '%title'); ?> 
+          <div class="tt-blog-nav-label"><i class='fa fa-arrow-left'></i><?php echo magplus_get_opt('translation-previous-article'); ?></div>
+          <?php previous_post_link('%link', '%title'); ?>
         </div>
         <div class="empty-space marg-xs-b20"></div>
       </div>
@@ -994,8 +994,9 @@ if(!function_exists('magplus_post_navigation')) {
       <?php if (get_next_post()): ?>
       <div class="col-sm-6">
         <div class="tt-blog-nav right">
-          <div class="tt-blog-nav-label"><?php echo magplus_get_opt('translation-next-article'); ?></div>
-          <?php next_post_link('%link', '%title'); ?>                                    
+          <div class="tt-blog-nav-label"><?php echo magplus_get_opt('translation-next-article'); ?><i
+                  class='fa fa-arrow-right'></i></div>
+          <?php next_post_link('%link', '%title'); ?>
         </div>
       </div>
       <?php endif; ?>
@@ -1026,7 +1027,7 @@ if(!function_exists('magplus_popup')) {
           <div class="tt-video-popup-close"></div>
         </div>
       </div>
-    </div> 
+    </div>
 
     <div class="tt-thumb-popup">
       <div class="tt-thumb-popup-overlay"></div>
@@ -1039,7 +1040,7 @@ if(!function_exists('magplus_popup')) {
           <div class="tt-thumb-popup-close"></div>
         </div>
       </div>
-    </div>  
+    </div>
   <?php
   }
 }
@@ -1060,10 +1061,10 @@ if(!function_exists('search_popup')) {
             <div class="tt-s-popup-field">
               <input type="text" id="s" name="s" value="" placeholder="<?php echo magplus_get_opt('translation-type-to-search'); ?>" class="input" required>
               <div class="tt-s-popup-devider"></div>
-              <h3 class="tt-s-popup-title"><?php echo magplus_get_opt('translation-type-to-search'); ?></h3>     
+              <h3 class="tt-s-popup-title"><?php echo magplus_get_opt('translation-type-to-search'); ?></h3>
             </div>
             <a href="#" class="tt-s-popup-close"></a>
-          </form> 
+          </form>
         </div>
       </div>
     </div>
@@ -1086,8 +1087,8 @@ if(!function_exists('magplus_post_grid')) {
             <?php magplus_blog_title('c-h5'); ?>
             <?php magplus_blog_author_date(); ?>
           </div>
-      </div> 
-      <div class="empty-space marg-lg-b25"></div>                 
+      </div>
+      <div class="empty-space marg-lg-b25"></div>
     </div>
   <?php
   }
@@ -1099,7 +1100,7 @@ if(!function_exists('magplus_post_grid')) {
  * @return array
  */
 if(!function_exists('magplus_sidebar_heading_style')) {
-  function magplus_sidebar_heading_style() { 
+  function magplus_sidebar_heading_style() {
     $hello = magplus_get_opt('sidebar-heading-style');
   }
 }
@@ -1110,7 +1111,7 @@ if(!function_exists('magplus_sidebar_heading_style')) {
  * @return array
  */
 if(!function_exists('magplus_footer_columns')) {
-  function magplus_footer_columns() { 
+  function magplus_footer_columns() {
     $footer_columns = magplus_get_opt('footer-column');
     switch ($footer_columns) {
       case '1':
@@ -1161,7 +1162,7 @@ if(!function_exists('magplus_top_latest_news')) {
           </div>
         </div>
       <?php
-      endwhile; 
+      endwhile;
       wp_reset_postdata();
     endif;
   }
@@ -1173,19 +1174,19 @@ if(!function_exists('magplus_top_latest_news')) {
  * @return array
  */
 if(!function_exists('magplus_breaking_news_weather')) {
-  function magplus_breaking_news_weather() { 
+  function magplus_breaking_news_weather() {
     $breaking_news = magplus_get_opt('header-enable-breaking-news');
-    if(!$breaking_news) { return; }  
+    if(!$breaking_news) { return; }
     wp_enqueue_script('swiper');
-    wp_enqueue_style('swiper'); 
-                  
+    wp_enqueue_style('swiper');
+
     $args = array(
       'posts_per_page' => -1,
       'meta_key'       => 'post-enable-breaking-news',
       'meta_value'     =>  1
     );
-    $the_query = new WP_Query($args); if($the_query->have_posts()): 
-                  
+    $the_query = new WP_Query($args); if($the_query->have_posts()):
+
   ?>
 
   <div class="container">
@@ -1194,7 +1195,7 @@ if(!function_exists('magplus_breaking_news_weather')) {
         <div class="tt-breaking-news-weather-wrapper">
           <div class="tt-breaking-news">
             <div class="tt-breaking-news-title"><?php echo magplus_get_opt('translation-breaking-news'); ?></div>
-            <div class="swiper-container tt-news-content" data-autoplay="1" data-loop="1" data-speed="500" data-center="0" data-slides-per-view="1"> 
+            <div class="swiper-container tt-news-content" data-autoplay="1" data-loop="1" data-speed="500" data-center="0" data-slides-per-view="1">
               <div class="swiper-wrapper tt-breaking-news-posts">
 
                 <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
@@ -1212,7 +1213,7 @@ if(!function_exists('magplus_breaking_news_weather')) {
             </div>
 
           </div>
-          <?php 
+          <?php
             $header_hash_tags = magplus_get_opt('header-hash-tags');
             if(is_array($header_hash_tags) && !empty($header_hash_tags)):
           ?>
@@ -1269,7 +1270,7 @@ if(!function_exists('magplus_calc_rating')) {
     $total_rating = ($count > 0) ? number_format(($total_rating / $count), 1):$total_rating;
 
     return ($is_total) ? $total_rating:$progress_bar_rating;
-    
+
   }
 }
 
@@ -1294,9 +1295,9 @@ if(!function_exists('magplus_review_post_format')) {
   <div class="tt-rating">
 
     <div class="tt-rating-progress">
-    
+
     <?php $rating_total = 0; foreach ($progress_bar_rating as $label => $rating_number): ?>
-      
+
       <div class="tt-progress-title"><?php echo esc_html($label); ?></div>
       <div class="tt-progress-number"><?php echo esc_html($rating_number); ?></div>
       <div class="progress tpl-progress">
@@ -1309,9 +1310,9 @@ if(!function_exists('magplus_review_post_format')) {
 
     <div class="tt-rating-content">
 
-      <div class="row">  
+      <div class="row">
 
-        <div class="col-md-10 col-xs-12">  
+        <div class="col-md-10 col-xs-12">
           <?php if(!empty($summary_text)): ?>
             <div class="tt-summary-title"><h4 class="c-h5"><?php echo magplus_get_opt('translation-summary'); ?></h4></div><div class="empty-space marg-lg-b5"></div>
             <div class="tt-summary-text simple-text"><p><?php echo wp_kses_post($summary_text); ?></p></div>
@@ -1319,10 +1320,10 @@ if(!function_exists('magplus_review_post_format')) {
         </div>
 
         <div class="col-md-2 text-right col-xs-12">
-          <div class="empty-space marg-xs-b15"></div>  
+          <div class="empty-space marg-xs-b15"></div>
           <div class="tt-rating-title"><h4 class="c-h5"><?php echo magplus_get_opt('translation-total-rating'); ?></h4></div><div class="empty-space marg-lg-b10"></div>
-            <div class="tt-rating-text"><?php echo number_format(($rating_total / $count), 1); ?></div> 
-        </div>  
+            <div class="tt-rating-text"><?php echo number_format(($rating_total / $count), 1); ?></div>
+        </div>
 
       </div>
     </div>
@@ -1378,7 +1379,7 @@ if(!function_exists('magplus_post_up_down_vote')) {
         <a href="#" class="tt-vote-btn tt-down-vote-btn <?php echo ($is_up == 'false') ? 'voted':''; ?>"><i class="material-icons">arrow_drop_down</i></a>
       </div>
       <div class="empty-space marg-lg-b60 marg-sm-b60"></div>
-    <?php 
+    <?php
     endif;
   }
 }
@@ -1396,7 +1397,7 @@ if(!function_exists('magplus_link_post_format_dl_btn')) {
         <a href="<?php echo esc_url($download_url['url']); ?>" target="_self" class="c-btn type-1 style-2 color-4 <?php echo esc_attr($btn_size); ?>"><span><?php echo magplus_get_opt('translation-download-now'); ?></span></a>
         <div class="tt-download-number"><span class="tt-dl-count"><?php echo esc_html($dl_count); ?></span> <?php echo magplus_get_opt('translation-downloads'); ?></div>
       </div>
-  <?php 
+  <?php
     endif;
   }
 }

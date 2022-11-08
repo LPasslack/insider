@@ -47,6 +47,7 @@ $this->sections[] = array(
       'options' => array(
         'default'                    => esc_html__('Default','magplus'),
         'default-title-left-aligned' => esc_html__('Post Title Left','magplus'),
+        'insider-title-left-aligned' => esc_html__('Insider Post Title Left','magplus'),
         'default-alt'                => esc_html__('No Hero','magplus'),
         'alternative'                => esc_html__('Big Hero','magplus'),
         'alternative-title-middle'   => esc_html__('Box Hero','magplus'),
@@ -140,7 +141,7 @@ $this->sections[] = array(
       ),
       'default' => '1',
     ),
-    
+
     array(
       'id'=>'post-enable-author-description',
       'type' => 'switch',

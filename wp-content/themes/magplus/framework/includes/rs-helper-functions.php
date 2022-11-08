@@ -129,7 +129,7 @@ if(!function_exists('magplus_add_inline_style')) {
     }
     array_push( $inline_styles, $style );
     $oArgs -> set('inline_styles', $inline_styles);
-  }  
+  }
 }
 
 /**
@@ -245,7 +245,7 @@ if ( ! function_exists( 'magplus_auto_post_excerpt' ) ) {
       $content .= ' ...';
 
     }
-  
+
     return (strpos($content, '[vc_') !== false) ? null:$content;
 
   }
@@ -369,7 +369,7 @@ if(!function_exists('magplus_header_template')) {
         break;
       case 'header-style4':
         get_template_part('templates/header/header-style4');
-        break; 
+        break;
       case 'header-style5':
         get_template_part('templates/header/header-style5');
         break;
@@ -534,6 +534,10 @@ if(!function_exists('magplus_blog_post_template')) {
         get_template_part('templates/blog/blog-single/layout/default-title-left-aligned');
         # code...
         break;
+      case 'insider-title-left-aligned':
+        get_template_part('templates/blog/blog-single/layout/insider-title-left-aligned');
+        # code...
+        break;
       case 'alternative-title-middle':
         get_template_part('templates/blog/blog-single/layout/alternative-title-middle');
         # code...
@@ -579,13 +583,13 @@ if(!function_exists('magplus_get_terms_assoc')) {
 
 /**
  * Get associative special content array
- * 
+ *
  * @param type $terms
  * @return boolean
  */
 if(!function_exists('magplus_get_special_content_array')) {
   function magplus_get_special_content_array() {
-    
+
     $args = array(
       'posts_per_page' => -1,
       'offset'         => 0,
@@ -594,20 +598,20 @@ if(!function_exists('magplus_get_special_content_array')) {
       'post_type'      => 'special-content',
       'post_status'    => 'publish'
     );
-    
+
     $custom_query = new WP_Query($args);
-    
+
     $special_content = array();
-    
+
     if ( $custom_query->have_posts() ) {
-      
+
       while ( $custom_query -> have_posts() ) {
-        $custom_query -> the_post(); 
+        $custom_query -> the_post();
         $special_content[get_the_ID()] = get_the_title();
       }
       wp_reset_postdata();
     }
-    
+
     return $special_content;
   }
 }
@@ -618,9 +622,9 @@ if(!function_exists('magplus_get_special_content_array')) {
  */
 if(!function_exists('magplus_after_content_special_content')) {
   function magplus_after_content_special_content() {
-    
+
     if (!magplus_get_post_opt('page-show-special-content-after-content')) {return;}
-    
+
     $page = magplus_get_post_opt('page-after-special-content');
     //var_dump($page);
     magplus_echo_page_content($page);
@@ -633,9 +637,9 @@ if(!function_exists('magplus_after_content_special_content')) {
  */
 if(!function_exists('magplus_before_content_special_content')) {
   function magplus_before_content_special_content() {
-    
+
     if (!magplus_get_post_opt('page-show-special-content-before-content')) {return;}
-    
+
     $page = magplus_get_post_opt('page-before-special-content');
     //var_dump($page);
     magplus_echo_page_content($page);
@@ -651,7 +655,7 @@ if(!function_exists('magplus_echo_page_content')) {
   function magplus_echo_page_content($page) {
 
     if (!intval($page)) {return;}
-    
+
     $args = array(
       'posts_per_page' => 1,
       'page_id'        => $page,
@@ -661,11 +665,11 @@ if(!function_exists('magplus_echo_page_content')) {
     $query = new WP_Query($args);
 
     //var_dump($query);
-    
+
     if ($query -> have_posts()):
       while ($query -> have_posts()) : $query -> the_post();
         the_content();
-      endwhile; 
+      endwhile;
       wp_reset_postdata();
     endif;
   }
@@ -762,9 +766,9 @@ if(!function_exists('magplus_post_format')) {
   function magplus_post_format($image_size = '', $class = '', $time_farme = true, $url = '') {
     $post_format = get_post_format();
     switch ($post_format) {
-      case 'video': 
-      $video_url    = (empty($url)) ? get_post_meta( get_the_ID(), 'post-video-url', true):$url; 
-      $video_length = get_post_meta(get_the_ID(), 'post-video-length', true); 
+      case 'video':
+      $video_url    = (empty($url)) ? get_post_meta( get_the_ID(), 'post-video-url', true):$url;
+      $video_length = get_post_meta(get_the_ID(), 'post-video-length', true);
       if(!empty($video_url)): ?>
         <a class="tt-post-img tt-video-open custom-hover " href="<?php echo esc_url($video_url); ?>?autoplay=1">
           <span class="tt-post-icon"><i class="material-icons">videocam</i></span>
@@ -815,7 +819,7 @@ if(!function_exists('magplus_post_format')) {
           </a>
         <?php endif;
         break;
-      
+
       default:
       case 'link':
         magplus_blog_featured_image($image_size, $class);
@@ -846,7 +850,7 @@ if(!function_exists('magplus_weekly_post_format')) {
       case 'gallery': ?>
         <?php
           wp_enqueue_script('swiper');
-          wp_enqueue_style('swiper'); 
+          wp_enqueue_style('swiper');
           if(is_array($post_gallery) && !empty($post_gallery)): ?>
 
           <div class="tt-post-img swiper-container" data-autoplay="5000" data-loop="1" data-speed="500" data-center="0" data-slides-per-view="1">
@@ -856,7 +860,7 @@ if(!function_exists('magplus_weekly_post_format')) {
               <div class="swiper-slide <?php echo ($key == 0) ? 'active':''; ?>" data-val="<?php echo esc_attr($key); ?>">
                 <a class="custom-hover" href="<?php echo esc_url($permalink); ?>">
                   <img class="img-responsive" src="<?php echo esc_url($image_url); ?>" alt="">
-                </a>                                         
+                </a>
               </div>
               <?php endforeach; ?>
 
@@ -869,7 +873,7 @@ if(!function_exists('magplus_weekly_post_format')) {
 
         <?php
         break;
-      
+
       default: ?>
         <a class="tt-post-img custom-hover" href="<?php echo esc_url($permalink); ?>">
           <img class="img-responsive" src="<?php echo esc_url($image_url); ?>" alt="">
@@ -1007,13 +1011,13 @@ if(!function_exists('magplus_get_inline_css')) {
       do_shortcode( get_page($page_after_special_content)->post_content );
     }
 
-    $args   = ThemeArguments::getInstance('inline_style'); 
+    $args   = ThemeArguments::getInstance('inline_style');
     $styles = $args->get('inline_styles');
 
     $magplus_tabindex = 1000;
 
     return (is_array($styles) && !empty($styles)) ? magplus_css_compress( htmlspecialchars_decode( wp_kses_data( join( '', $styles ) ) ) ):NULL;
-  }  
+  }
 }
 
 /**
