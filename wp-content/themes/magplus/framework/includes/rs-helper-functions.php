@@ -409,6 +409,9 @@ if(!function_exists('magplus_footer_template')) {
   function magplus_footer_template($layout) {
     if(class_exists('ReduxFramework') && !magplus_get_opt('footer-enable-switch')) { return; }
     switch ($layout) {
+    case 'footer-insider':
+        get_template_part('templates/footer/footer-insider');
+        break;
       case 'footer-style3':
         get_template_part('templates/footer/footer-style3');
         break;

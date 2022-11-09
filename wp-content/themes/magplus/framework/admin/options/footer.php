@@ -32,12 +32,13 @@ $this->sections[] = array(
       'title'     => esc_html__('Footer Template', 'magplus'),
       'subtitle'  => esc_html__('Select footer layout.', 'magplus'),
       'options'   => array(
-        'footer-style1' => esc_html__('Footer Style 1', 'magplus'),
-        'footer-style2' => esc_html__('Footer Style 2', 'magplus'),
-        'footer-style3' => esc_html__('Footer Style 3', 'magplus'),
+        'footer-insider' => esc_html__('Footer Insider', 'magplus'),
+        'footer-style1'  => esc_html__('Footer Style 1', 'magplus'),
+        'footer-style2'  => esc_html__('Footer Style 2', 'magplus'),
+        'footer-style3'  => esc_html__('Footer Style 3', 'magplus'),
       ),
       'default'   => 'footer-style1',
-    ), 
+    ),
     array(
       'id'        => 'footer-column',
       'type'      => 'select',

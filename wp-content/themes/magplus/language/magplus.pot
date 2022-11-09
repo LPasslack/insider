@@ -1271,15 +1271,19 @@ msgstr ""
 msgid "Select footer layout."
 msgstr ""
 
-#: framework/admin/options/footer.php:29
+#: framework/admin/options/footer.php:35
+msgid "Footer Insider"
+msgstr ""
+
+#: framework/admin/options/footer.php:36
 msgid "Footer Style 1"
 msgstr ""
 
-#: framework/admin/options/footer.php:30
+#: framework/admin/options/footer.php:37
 msgid "Footer Style 2"
 msgstr ""
 
-#: framework/admin/options/footer.php:31
+#: framework/admin/options/footer.php:38
 msgid "Footer Style 3"
 msgstr ""
 
