@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ComposerJsonPluginSettings">
+    <unboundedVersionInspectionSettings>
+      <excludedPackages />
+    </unboundedVersionInspectionSettings>
+    <customRepositories />
+    <composerUpdateOptions />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES5" />
+  </component>
+  <component name="LivingDoc">
+    <option name="password" value="Sandokan!02435" />
+    <option name="urlServer" value="https://confluence.ideal-services.de/index.action" />
+    <option name="user" value="Passlackl" />
+  </component>
+</project>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="plugins">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/magplus/plugins/magplus-amp.zip!/" />
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/magplus/plugins/magplus-addons.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

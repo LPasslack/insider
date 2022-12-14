@@ -1,0 +1,352 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+ *  TYPOGRAPHY
+ * ------------------------------------------------------------------------------------------------------------------ */
+.simple-text h1,
+.c-h1 {
+  font-family: 'Roboto Slab';
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 700;
+  color: $grey-dark;
+}
+
+.simple-text h2,
+.c-h2 {
+  font-family: 'Roboto Slab';
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 700;
+  color: $black-light-mp;
+}
+
+.simple-text h3,
+.c-h3 {
+  font-family: 'Roboto Slab';
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 700;
+  color: $black-light-mp;
+}
+
+.simple-text h3 small,
+.c-h3 small {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.simple-text h4,
+.c-h4 {
+  font-family: 'Roboto Slab';
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $black-light-mp;
+}
+
+.simple-text h4 small,
+.c-h4 small {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.simple-text h5,
+.c-h5 {
+  font-family: 'Roboto Slab';
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $black-light-mp;
+}
+
+.simple-text h5 small,
+.c-h5 small {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.simple-text h6,
+.c-h6 {
+  font-family: 'Roboto Slab';
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 700;
+  color: #282c34;
+}
+
+.simple-text h6 small,
+.c-h6 small {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: inherit;
+  color: inherit;
+}
+
+@media (max-width: $screen-xs-max) {
+
+  .simple-text h1,
+  .c-h1 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .simple-text h2,
+  .c-h2 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .simple-text h3,
+  .c-h3 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  .tt-rating-progress,
+  .tt-rating-average {
+    float: none !important;
+    width: 100% !important;
+  }
+
+  .tt-header-type-6 .tt-s-popup-btn {
+    color: $black-light-mp;
+  }
+
+  .tt-header-type-6.tt-header .cmn-mobile-switch span,
+  .tt-header-type-6.tt-header .cmn-mobile-switch::before,
+  .tt-header-type-6.tt-header .cmn-mobile-switch::after {
+    background: $black-light-mp;
+  }
+}
+
+.leadin {
+  font-family: "Roboto Slab", serif;
+  font-size: 16px;
+  font-weight: 900;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+  color: $grey-dark;
+}
+
+.simple-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: $grey-dark;
+}
+
+.simple-text i,
+.simple-text em {
+  font-style: italic;
+}
+
+.simple-text b,
+.simple-text strong,
+strong,
+b {
+  font-weight: 700;
+}
+
+.simple-text u {
+  text-decoration: underline;
+}
+
+.simple-text a {
+  color: $mediumblue-60;
+}
+
+.simple-text a:hover {
+  color: $black-light-mp;
+}
+
+.simple-text.size-2 {
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.simple-text.size-3 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.simple-text.size-4 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.simple-text.size-5 {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.simple-text.size-6 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.simple-text.color-2 {
+  color: $black-light-mp;
+}
+
+.simple-text.color-3 {
+  color: $color-3-mp;
+}
+
+.simple-text.color-4 {
+  color: $white-60;
+}
+
+.simple-text.color-5 {
+  color: $grey-dark;
+}
+
+.simple-text.font-Roboto {
+  font-family: 'Roboto Slab';
+}
+
+.simple-text.title-droid h1, .simple-text.title-droid .h1,
+.simple-text.title-droid h2, .simple-text.title-droid .h2,
+.simple-text.title-droid h3, .simple-text.title-droid .h3,
+.simple-text.title-droid h4, .simple-text.title-droid .h4,
+.simple-text.title-droid h5, .simple-text.title-droid .h5,
+.simple-text.title-droid h6, .simple-text.title-droid .h6 {
+  font-family: 'Lato Black';
+}
+
+
+/*  margins  */
+.simple-text p,
+.simple-text img,
+.simple-text blockquote,
+.simple-text ul,
+.simple-text ol,
+.simple-text div[class^="col-"],
+.simple-text .embed-responsive,
+.simple-text .instagram-media,
+.simple-text .swiper-container,
+.simple-text iframe {
+  max-width: 100%;
+  margin-top: 0;
+  /*margin-bottom: 32px;*/
+}
+
+.simple-text h1,
+.simple-text h2,
+.simple-text h3,
+.simple-text h4,
+.simple-text h5,
+.simple-text h6 {
+  max-width: 100%;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.simple-text .row:last-child {
+  margin-bottom: -32px;
+}
+/*.simple-text .list-unstyled {
+  margin-bottom: 0;
+}*/
+
+/*.simple-text *:last-child {
+  margin-bottom: 0;
+}*/
+
+
+/* margins */
+
+.simple-text.margin-big p,
+.simple-text.margin-big img,
+.simple-text.margin-big blockquote,
+.simple-text.margin-big ul,
+.simple-text.margin-big ol,
+.simple-text.margin-big div[class^="col-"] {
+  //margin-bottom: 40px;
+}
+
+.simple-text.margin-big .row:last-child {
+  margin-bottom: -40px;
+}
+
+/*.simple-text.margin-big *:last-child {
+  margin-bottom: 0;
+}*/
+
+@media (max-width: $screen-xs-max) {
+
+  .simple-text.margin-big p,
+  .simple-text.margin-big img,
+  .simple-text.margin-big blockquote,
+  .simple-text.margin-big ul,
+  .simple-text.margin-big ol,
+  .simple-text.margin-big div[class^="col-"] {
+    margin-bottom: 20px;
+  }
+
+  .simple-text.margin-big .row:last-child {
+    margin-bottom: -20px;
+  }
+
+  /*.simple-text.margin-big *:last-child {
+    margin-bottom: 0;
+  }*/
+}
+
+
+/* blockquote */
+
+.simple-text blockquote {
+  font-size: 24px;
+  line-height: 30px;
+  color: $black-light-mp;
+  border: 1px solid $blockquote-border-mp;
+  text-align: center;
+  padding: 56px 60px;
+}
+
+.simple-text blockquote p,
+.simple-text.margin-big blockquote p {
+  margin-bottom: 20px;
+}
+
+.simple-text blockquote p:last-child,
+.simple-text.margin-big blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.simple-text blockquote footer {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  margin-top: -11px;
+  color: $black-light-mp;
+}
+
+.simple-text blockquote footer:before {
+  content: '-';
+}
+
+@media (max-width: $screen-xs-max) {
+  .simple-text blockquote {
+    padding: 30px 15px;
+  }
+}
+
+.simple-text .simple-img[align="left"] {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+
+.simple-text .simple-img[align="right"] {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}

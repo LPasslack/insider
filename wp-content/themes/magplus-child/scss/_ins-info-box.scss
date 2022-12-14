@@ -1,0 +1,45 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+ * INFO BOXES
+ * -------------------------------------------------------------------------------------------------------------------*/
+
+.info-box {
+  padding: 34px!important;
+  margin: 0;
+  border-radius: 4px;
+  h1, h2, h3, h4 {
+    font-family: "Lato Black" !important;
+    color: $grey-dark;
+    font-size: 24px;
+    line-height: 1.33;
+    font-weight: 900!important;
+    mark {
+      color: $grey-dark;
+      background-color: transparent;
+
+    }
+  }
+  p:last-child {
+    margin: 0;
+  }
+  &-container {
+    @media (min-width:$screen-sm-min) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-content: center;
+      align-items: flex-start;
+      gap: 15px;
+      .info-box {
+        align-self: auto;
+        overflow: scroll;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
+  .vc_column-inner {
+    padding: 0!important;
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="df39a1e6-f3cd-4049-bf2b-fb0febee6c6e" name="Testserver" url="http://v542webdev:18888/insider-blog/">
+        <fileTransfer mountedRoot="T:\blog\insider-blog" accessType="MOUNT" port="0" />
+      </webServer>
+      <webServer id="2834b2d0-38ab-4a7d-8c4e-e24f8753a03f" name="Insider Sandbox" url="http://v542webdev:18888/insider-blog/">
+        <fileTransfer mountedRoot="T:\blog\insider-blog-sandbox" accessType="MOUNT" port="0" />
+      </webServer>
+      <webServer id="1a71575b-d7dd-41c5-a8d9-8db5a54c5f54" name="Local" url="https://blog/insider-blog/">
+        <fileTransfer mountedRoot="C:\webserver\htdocs\blog\insider-blog" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

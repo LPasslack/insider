@@ -1,0 +1,29 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+ * Borders
+ * -------------------------------------------------------------------------------------------------------------------*/
+.border {
+  &-yellow {
+    border-radius: 4px;
+    border: solid 6px $yellow;
+  }
+  &-aquamarin-20 {
+    border-radius: 4px;
+    border: solid 6px $aquamarin-20;
+  }
+  &-red {
+    border-radius: 4px;
+    border: solid 6px $red;
+  }
+  &-darkblue {
+    border-radius: 4px;
+    border: solid 6px $darkblue;
+  }
+}
+
+.no-border, .no-border .wpb_wrapper {
+  border: none;
+}
+
+.no-border-radius {
+  border-radius: 0;
+}

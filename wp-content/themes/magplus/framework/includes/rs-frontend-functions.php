@@ -946,7 +946,7 @@ if(!function_exists('magplus_blog_post_bottom')) {
     <?php if($show_comment == 'yes' || $show_views == 'yes'): ?>
     <div class="tt-post-bottom">
       <?php if($show_comment == 'yes' && get_post_format() !== 'link'): ?>
-        <span class="tt-post-comment"><i class="material-icons">chat_bubble</i><?php comments_number(magplus_get_opt('translation-zero-comment'), magplus_get_opt('translation-one-comment'), '% '.magplus_get_opt('translation-comments') ); ?></span>
+        <span class="tt-post-comment"><i class="material-icons"></i><?php comments_number(magplus_get_opt('translation-zero-comment'), magplus_get_opt('translation-one-comment'), '% '.magplus_get_opt('translation-comments') ); ?></span>
       <?php endif; ?>
       <?php if($show_views == 'yes'): ?>
         <span class="tt-post-views"><i class="material-icons">visibility</i><?php echo magplus_getPostViews(get_the_ID()); ?></span>

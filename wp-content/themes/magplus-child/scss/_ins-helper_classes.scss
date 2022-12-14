@@ -1,0 +1,467 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+ * HELPER CLASSES
+ * -------------------------------------------------------------------------------------------------------------------*/
+.h1, .simple-text h1 {
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 2.4rem;
+  }
+  @media screen and (max-width: $screen-md-min) {
+    font-size: 2.4rem;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 2.4rem;
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 2.2rem;
+  }
+}
+.h2, .simple-text h2 {
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 2.4rem;
+  }
+  @media screen and (max-width: $screen-md-min) {
+    font-size: 2.4rem;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 1.8rem;
+  }
+}
+.h3, .simple-text h3 {
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-md-min) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 1.8rem;
+  }
+}
+.h4, .simple-text h4 {
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-md-min) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 1.8rem;
+  }
+}
+.h5, .simple-text h5 {
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-md-min) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 1.8rem;
+  }
+}
+.h6, .simple-text h6 {
+  @media screen and (min-width: $screen-lg-min) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: $screen-md-min) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-sm-max) {
+    font-size: 1.8rem;
+  }
+  @media screen and (max-width: $screen-xs-max) {
+    font-size: 1.8rem;
+  }
+}
+
+
+// Hilfsklasse zum generellen resetten der Margins auf 0
+.margin-reset, .margin-reset .wpb_wrapper {
+  margin: 0;
+}
+
+$margin-xxs: 6px;
+.margin-xxs {
+  margin: $margin-xxs;
+}
+.margin-xxs-h {
+  margin-left: $margin-xxs;
+  margin-right: $margin-xxs;
+}
+.margin-xxs-v {
+  margin-top: $margin-xxs;
+  margin-bottom: $margin-xxs;
+}
+.margin-xxs-t {
+  margin-top: $margin-xxs;
+}
+.margin-xxs-r {
+  margin-right: $margin-xxs;
+}
+.margin-xxs-b {
+  margin-bottom: $margin-xxs;
+}
+.margin-xxs-l {
+  margin-left: $margin-xxs;
+}
+
+$margin-xs: 10px;
+.margin-xs {
+  margin: $margin-xs;
+}
+.margin-xs-h {
+  margin-left: $margin-xs;
+  margin-right: $margin-xs;
+}
+.margin-xs-v {
+  margin-top: $margin-xs;
+  margin-bottom: $margin-xs;
+}
+.margin-xs-t {
+  margin-top: $margin-xs;
+}
+.margin-xs-r {
+  margin-right: $margin-xs;
+}
+.margin-xs-b {
+  margin-bottom: $margin-xs;
+}
+.margin-xs-l {
+  margin-left: $margin-xs;
+}
+
+$margin-sm: 20px;
+.margin-sm {
+  margin: $margin-sm;
+}
+.margin-sm-h {
+  margin-left: $margin-sm;
+  margin-right: $margin-sm;
+}
+.margin-sm-v {
+  margin-top: $margin-sm;
+  margin-bottom: $margin-sm;
+}
+.margin-sm-t {
+  margin-top: $margin-sm;
+}
+.margin-sm-r {
+  margin-right: $margin-sm;
+}
+.margin-sm-b {
+  margin-bottom: $margin-sm;
+}
+.margin-sm-l {
+  margin-left: $margin-sm;
+}
+
+$margin-md: 30px;
+.margin-md {
+  margin: $margin-md;
+}
+.margin-md-h {
+  margin-left: $margin-md;
+  margin-right: $margin-md;
+}
+.margin-md-v {
+  margin-top: $margin-md;
+  margin-bottom: $margin-md;
+}
+.margin-md-t {
+  margin-top: $margin-md;
+}
+.margin-md-r {
+  margin-right: $margin-md;
+}
+.margin-md-b {
+  margin-bottom: $margin-md;
+}
+.margin-md-l {
+  margin-left: $margin-md;
+}
+
+$margin-lg: 32px;
+.margin-lg {
+  margin: $margin-lg;
+}
+.margin-lg-h {
+  margin-left: $margin-lg;
+  margin-right: $margin-lg;
+}
+.margin-lg-v {
+  margin-top: $margin-lg;
+  margin-bottom: $margin-lg;
+}
+.margin-lg-t {
+  margin-top: $margin-lg;
+}
+.margin-lg-r {
+  margin-right: $margin-lg;
+}
+.margin-lg-b {
+  margin-bottom: $margin-lg;
+}
+.margin-lg-l {
+  margin-left: $margin-lg;
+}
+
+$margin-xl: 42px;
+.margin-xl {
+  margin: $margin-xl;
+}
+.margin-xl-h {
+  margin-left: $margin-xl;
+  margin-right: $margin-xl;
+}
+.margin-xl-v {
+  margin-top: $margin-xl;
+  margin-bottom: $margin-xl;
+}
+.margin-xl-t {
+  margin-top: $margin-xl;
+}
+.margin-xl-r {
+  margin-right: $margin-xl;
+}
+.margin-xl-b {
+  margin-bottom: $margin-xl;
+}
+.margin-xl-l {
+  margin-left: $margin-xl;
+}
+
+$margin-xxl: 52px;
+.margin-xxl {
+  margin: $margin-xxl;
+}
+.margin-xxl-h {
+  margin-left: $margin-xxl;
+  margin-right: $margin-xxl;
+}
+.margin-xxl-v {
+  margin-top: $margin-xxl;
+  margin-bottom: $margin-xxl;
+}
+.margin-xxl-t {
+  margin-top: $margin-xxl;
+}
+.margin-xxl-r {
+  margin-right: $margin-xxl;
+}
+.margin-xxl-b {
+  margin-bottom: $margin-xxl;
+}
+.margin-xxl-l {
+  margin-left: $margin-xxl;
+}
+
+// Hilfsklasse zum resetten der Margins auf 0 pro Viewport
+@media screen and (min-width: $screen-lg-min) {
+  .margin-lg-reset {
+    margin: 0;
+  }
+}
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .margin-md-reset {
+    margin: 0;
+  }
+}
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .margin-sm-reset {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 0)  and (max-width: $screen-xs-max) {
+  .margin-xs-reset {
+    margin: 0;
+  }
+}
+
+
+.padding-reset, .padding-reset .wpb_wrapper {
+  padding: 0;
+}
+
+$padding-xs: 5px;
+.padding-xs {
+  margin: $padding-xs;
+}
+.padding-xs-h {
+  padding-left: $padding-xs;
+  padding-right: $padding-xs;
+}
+.padding-xs-v {
+  padding-top: $padding-xs;
+  padding-bottom: $padding-xs;
+}
+.padding-xs-t {
+  padding-top: $padding-xs;
+}
+.padding-xs-r {
+  padding-right: $padding-xs;
+}
+.padding-xs-b {
+  padding-bottom: $padding-xs;
+}
+.padding-xs-l {
+  padding-left: $padding-xs;
+}
+
+$padding-sm: 10px;
+.padding-sm {
+  margin: $padding-sm;
+}
+.padding-sm-h {
+  padding-left: $padding-sm;
+  padding-right: $padding-sm;
+}
+.padding-sm-v {
+  padding-top: $padding-sm;
+  padding-bottom: $padding-sm;
+}
+.padding-sm-t {
+  padding-top: $padding-sm;
+}
+.padding-sm-r {
+  padding-right: $padding-sm;
+}
+.padding-sm-b {
+  padding-bottom: $padding-sm;
+}
+.padding-sm-l {
+  padding-left: $padding-sm;
+}
+
+$padding-md: 15px;
+.padding-md {
+  margin: $padding-md;
+}
+.padding-md-h {
+  padding-left: $padding-md;
+  padding-right: $padding-md;
+}
+.padding-md-v {
+  padding-top: $padding-md;
+  padding-bottom: $padding-md;
+}
+.padding-md-t {
+  padding-top: $padding-md;
+}
+.padding-md-r {
+  padding-right: $padding-md;
+}
+.padding-md-b {
+  padding-bottom: $padding-md;
+}
+.padding-md-l {
+  padding-left: $padding-md;
+}
+
+$padding-lg: 20px;
+.padding-lg {
+  margin: $padding-lg;
+}
+.padding-lg-h {
+  padding-left: $padding-lg;
+  padding-right: $padding-lg;
+}
+.padding-lg-v {
+  padding-top: $padding-lg;
+  padding-bottom: $padding-lg;
+}
+.padding-lg-t {
+  padding-top: $padding-lg;
+}
+.padding-lg-r {
+  padding-right: $padding-lg;
+}
+.padding-lg-b {
+  padding-bottom: $padding-lg;
+}
+.padding-lg-l {
+  padding-left: $padding-lg;
+}
+
+$padding-xl: 25px;
+.padding-xl {
+  margin: $padding-xl;
+}
+.padding-xl-h {
+  padding-left: $padding-xl;
+  padding-right: $padding-xl;
+}
+.padding-xl-v {
+  padding-top: $padding-xl;
+  padding-bottom: $padding-xl;
+}
+.padding-xl-t {
+  padding-top: $padding-xl;
+}
+.padding-xl-r {
+  padding-right: $padding-xl;
+}
+.padding-xl-b {
+  padding-bottom: $padding-xl;
+}
+.padding-xl-l {
+  padding-left: $padding-xl;
+}
+
+$padding-xxl: 30px;
+.padding-xl {
+  margin: $padding-xxl;
+}
+.padding-xxl-h {
+  padding-left: $padding-xxl;
+  padding-right: $padding-xxl;
+}
+.padding-xxl-v {
+  padding-top: $padding-xxl;
+  padding-bottom: $padding-xxl;
+}
+.padding-xxl-t {
+  padding-top: $padding-xxl;
+}
+.padding-xxl-r {
+  padding-right: $padding-xxl;
+}
+.padding-xxl-b {
+  padding-bottom: $padding-xxl;
+}
+.padding-xxl-l {
+  padding-left: $padding-xxl;
+}
+
+// Hilfsklasse zum resetten der Margins auf 0 pro Viewport
+@media screen and (min-width: $screen-lg-min) {
+  .padding-lg-reset {
+    padding: 0;
+  }
+}
+@media screen and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+  .padding-md-reset {
+    padding: 0;
+  }
+}
+@media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+  .padding-sm-reset {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 0)  and (max-width: $screen-xs-max) {
+  .padding-xs-reset {
+    padding: 0;
+  }
+}

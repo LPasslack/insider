@@ -25,15 +25,15 @@ require get_theme_file_path('framework/admin/admin-init.php');
 
 if( !function_exists('magplus_after_setup')) {
   function magplus_after_setup() {
-    add_image_size('magplus-small-hor',    110,  81,  true ); 
-    add_image_size('magplus-small',        183,  96,  true ); 
-    add_image_size('magplus-small-ver',    225,  305,  true ); 
-    add_image_size('magplus-small-alt',    80,   80,  true ); 
-    add_image_size('magplus-medium',       394,  218, true ); 
-    add_image_size('magplus-medium-ver',   288,  180, true );  
-    add_image_size('magplus-medium-hor',   335,  160, true ); 
-    add_image_size('magplus-medium-alt',   290,  162, true ); 
-    add_image_size('magplus-big-alt',      608,  505, true ); 
+    add_image_size('magplus-small-hor',    110,  81,  true );
+    add_image_size('magplus-small',        183,  96,  true );
+    add_image_size('magplus-small-ver',    225,  305,  true );
+    add_image_size('magplus-small-alt',    80,   80,  true );
+    add_image_size('magplus-medium',       394,  218, true );
+    add_image_size('magplus-medium-ver',   288,  180, true );
+    add_image_size('magplus-medium-hor',   335,  160, true );
+    add_image_size('magplus-medium-alt',   290,  162, true );
+    add_image_size('magplus-big-alt',      608,  505, true );
     add_image_size('magplus-big',          820,  394, true );
     add_image_size('magplus-big-alt-2',    537,  307, true );
 
@@ -68,7 +68,7 @@ if($remove_duplicates):
 endif;
 /**
  * Action callback: Add to list processed posts to handle duplicates
- * 
+ *
  * @param object $query
  */
 global $magplus_registry;
@@ -82,7 +82,7 @@ if(!function_exists('magplus_update_duplicate_posts')) {
 
     foreach ($query->posts as $post) {
       $duplicates = (array) $magplus_registry['page_duplicate_posts'];
-      array_push($duplicates, $post->ID); 
+      array_push($duplicates, $post->ID);
       $magplus_registry['page_duplicate_posts'] = $duplicates;
     }
   }
@@ -90,7 +90,7 @@ if(!function_exists('magplus_update_duplicate_posts')) {
 
 /**
  * Filter callback: Enable duplicate prevention on these query args
- * 
+ *
  * @param array $query  query arguments
  */
 if(!function_exists('magplus_add_duplicate_exclude')) {
@@ -99,14 +99,14 @@ if(!function_exists('magplus_add_duplicate_exclude')) {
     if (!is_front_page()) {
       return $query;
     }
-    
+
     if (!isset($magplus_registry['page_duplicate_posts'])) {
       $magplus_registry['page_duplicate_posts'] = array();
     }
-    
+
     $query['post__not_in'] = $magplus_registry['page_duplicate_posts'];
     $query['handle_duplicates'] = true;
-        
+
     return $query;
   }
 }

@@ -8,21 +8,23 @@
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?>>
-  <head>
+<head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <?php wp_head(); ?>
-  </head>
-  <body <?php body_class(); ?>>
+</head>
+<body <?php body_class(); ?>>
 
-  <div id="wrapper">
+<div id="wrapper">
 
-  <?php magplus_loader(); ?>
-  <?php magplus_sideheader(); ?>
-  <?php search_popup(); ?>
-  <?php magplus_popup(); ?>
+    <?php magplus_loader(); ?>
+    <?php magplus_sideheader(); ?>
+    <?php search_popup(); ?>
+    <?php magplus_popup(); ?>
 
-  <div id="content-wrapper">
-  <?php magplus_header_template(magplus_get_opt('header-template')); ?>
-  <?php get_template_part('templates/title-wrapper/default'); ?>
+    <div id="content-wrapper">
+        <?php magplus_header_template(magplus_get_opt('header-template')); ?>
+        <?php get_template_part('templates/title-wrapper/default'); ?>

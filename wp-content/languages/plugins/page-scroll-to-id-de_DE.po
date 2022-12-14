@@ -1,0 +1,90 @@
+# Translation of Plugins - Page scroll to id - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - Page scroll to id - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-03-31 13:44:44+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Page scroll to id - Stable (latest release)\n"
+
+#: includes/ps2id-plugin-admin-notice.php:47
+#: includes/ps2id-plugin-admin-notice.php:49
+#: includes/ps2id-plugin-admin-notice.php:50
+msgid "Dismiss this notice"
+msgstr "Diesen Hinweis ausblenden"
+
+#: malihu-pagescroll2id.php:124 malihu-pagescroll2id.php:129
+msgid "<div class=\"error\"><p><strong>"
+msgstr "<div class=\"error\"><p><strong>"
+
+#: includes/admin.php:5
+msgid "<span><span class=\"dashicons dashicons-editor-help\"></span> Plugin help &amp; resources:</span> <a href=\"#\" class=\"mPS2id-open-help mPS2id-open-help-overview\">Overview</a> <a href=\"#\" class=\"mPS2id-open-help mPS2id-open-help-get-started\">Get started</a> <a href=\"#\" class=\"mPS2id-open-help mPS2id-open-help-plugin-settings\">Plugin settings</a> <a href=\"#\" class=\"mPS2id-open-help mPS2id-open-help-shortcodes\">Shortcodes</a> <a href=\"http://manos.malihu.gr/page-scroll-to-id-for-wordpress/\" class=\"mPS2id-external-link\" target=\"_blank\">Plugin homepage &amp; documentation</a> <a href=\"http://manos.malihu.gr/page-scroll-to-id-for-wordpress/2/\" class=\"mPS2id-external-link\" target=\"_blank\">Knowledge Base – FAQ</a> <a href=\"http://manos.malihu.gr/page-scroll-to-id-for-wordpress-tutorial/\" class=\"mPS2id-external-link\" target=\"_blank\">Basic tutorial</a>"
+msgstr "<span><span class=\"dashicons dashicons-editor-help\"></span> Plugin-Hilfe und Ressourcen:</span> <a href=\"#\" class=\"mPS2id-open-help mPS2id-open-help-overview\">Überblick</a> <a href=\"#\" class=\"mPS2id-open-help mPS2id-open-help-get-started\">Loslegen</a> <a href=\"#\" class=\"mPS2id-open-help mPS2id-open-help-plugin-settings\">Plugin-Einstellungen</a> <a href=\"#\" class=\"mPS2id-open-help mPS2id-open-help-shortcodes\">Shortcodes</a> <a href=\"http://manos.malihu.gr/page-scroll-to-id-for-wordpress/\" class=\"mPS2id-external-link\" target=\"_blank\">Plugin-Homepage und -Dokumentation</a> <a href=\"http://manos.malihu.gr/page-scroll-to-id-for-wordpress/2/\" class=\"mPS2id-external-link\" target=\"_blank\">Knowledge Base – FAQ</a> <a href=\"http://manos.malihu.gr/page-scroll-to-id-for-wordpress-tutorial/\" class=\"mPS2id-external-link\" target=\"_blank\">Basis-Tutorial</a>"
+
+#: includes/class-malihu-pagescroll2id-widget.php:42
+msgid "Optional element selector to use for highlighting (e.g. #another-id)"
+msgstr "Optionaler Elementauswahl für die Hervorhebung (z.&nbsp;B. #andere-id)"
+
+#: includes/class-malihu-pagescroll2id-widget.php:40
+msgid "Highlight target selector:"
+msgstr "Markiere die Zielauswahl:"
+
+#: includes/class-malihu-pagescroll2id-widget.php:37
+msgid "Unique identifier without spaces (e.g. my-id)"
+msgstr "Einzigartige ID ohne Leerzeichen (z.&nbsp;B. meine-id)"
+
+#: includes/class-malihu-pagescroll2id-widget.php:35
+msgid "id:"
+msgstr "ID:"
+
+#: includes/class-malihu-pagescroll2id-widget.php:17
+msgid "Single target element (anchor point)"
+msgstr "Einzelnes Zielelement (Ankerpunkt)"
+
+#: includes/class-malihu-pagescroll2id-widget.php:16
+msgid "Page scroll to id target"
+msgstr "Seitenlauf zur Ziel-ID"
+
+#. Author URI of the plugin
+msgid "http://manos.malihu.gr"
+msgstr "http://manos.malihu.gr"
+
+#. Author of the plugin
+msgid "malihu"
+msgstr "malihu"
+
+#. Description of the plugin
+msgid "Page scroll to id is an easy-to-use jQuery plugin that enables animated (smooth) page scrolling to specific id within the document."
+msgstr "Page scroll to id ist ein einfach zu verwendendes jQuery-Plugin, das (flüssige) Seitenlaufanimationen zu definierten IDs im Dokument ermöglicht."
+
+#. Plugin URI of the plugin
+msgid "http://manos.malihu.gr/page-scroll-to-id"
+msgstr "http://manos.malihu.gr/page-scroll-to-id"
+
+#. Plugin Name of the plugin
+msgid "Page scroll to id"
+msgstr "Page scroll to id"
+
+#: includes/admin.php:9
+msgid "Click to toggle"
+msgstr "Zum Umschalten klicken"
+
+#: includes/admin.php:8
+msgid "Reset to default"
+msgstr "Auf Standard zurücksetzen"
+
+#: includes/admin.php:8
+msgid "Delete all and reset to default"
+msgstr "Alle löschen und auf Standard zurücksetzen"
+
+#: includes/admin.php:7
+msgid "More actions"
+msgstr "Weitere Aktionen"
+
+#: includes/admin.php:6
+msgid "Add instance"
+msgstr "Instanz hinzufügen"

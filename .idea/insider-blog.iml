@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/docs/demo-files" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-admin/includes" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/akismet" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/antispam-bee" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/disable-json-api" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/disable-remove-google-fonts" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/duplicator" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/elementor" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/enable-media-replace" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/facebook-pagelike-widget" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/fb-instant-articles" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/js_composer" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/magplus-addons" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/magplus-amp" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/redux-framework" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/safe-svg" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/plugins/wordpress-seo" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/backups-dup-lite" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/languages" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-content/uploads" />
+      <excludeFolder url="file://$MODULE_DIR$/wp-includes" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

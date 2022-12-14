@@ -1,0 +1,36 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+ * Background Colors
+ * -------------------------------------------------------------------------------------------------------------------*/
+
+.bg {
+  &-yellow {
+    background-color: $yellow;
+    h1, h2, h3, h4 {
+      color: $white;
+      mark {
+        color: $grey-dark;
+      }
+    }
+  }
+  &-white {
+    background-color: $white;
+    h1, h2, h3, h4 {
+      color: $grey-dark;
+      mark {
+        color: $grey-dark;
+
+      }
+    }
+  }
+  &-aquamarin-20 {
+    background-color: $aquamarin-20;
+    h1, h2, h3, h4 {
+      color: $grey-dark;
+      mark {
+        color: $grey-dark;
+
+      }
+    }
+  }
+}
+

@@ -6404,7 +6404,7 @@ b {
   font-size: 28px;
   line-height: 34px;
   font-weight: 700;
-  color: #505050;
+  color: #038e9e;
 }
 
 .simple-text h3 small,
@@ -6446,7 +6446,7 @@ b {
   font-size: 18px;
   line-height: 1.22;
   font-weight: inherit;
-  color: #038e9e;
+  color: #505050;
 }
 
 .simple-text h6,
@@ -6512,6 +6512,11 @@ b {
 .simple-text em {
   font-style: italic;
 }
+.simple-text i.fa, .simple-text i.lnr,
+.simple-text em.fa,
+.simple-text em.lnr {
+  font-style: normal;
+}
 
 .simple-text b,
 .simple-text strong,
@@ -6529,7 +6534,7 @@ b {
 }
 
 .simple-text a:hover {
-  color: #111;
+  color: #003273;
 }
 
 .simple-text.size-2 {
@@ -6604,6 +6609,10 @@ b {
 .simple-text .swiper-container,
 .simple-text iframe {
   max-width: 100%;
+}
+
+.simple-text .comment-form-cookies-consent {
+  margin-bottom: 20px;
 }
 
 /*.simple-text .row:last-child {
@@ -6813,8 +6822,8 @@ b {
 
 .c-btn.type-1.color-2,
 .tt-comment-form .form-submit {
-  border-color: #66b4de;
-  color: #66b4de;
+  border-color: #038e9e;
+  color: white;
 }
 
 .c-btn.type-1.color-2:before,
@@ -6904,7 +6913,7 @@ b {
 
 .c-btn.type-1.style-2.color-2,
 .tt-comment-form .form-submit {
-  background: #66b4de;
+  background: #038e9e;
 }
 
 .c-btn.type-1.style-2.color-2:before,
@@ -6913,8 +6922,10 @@ b {
 }
 
 .c-btn.type-1.style-2.color-2:hover,
-.tt-comment-form .form-submit:hover {
-  color: #66b4de;
+.tt-comment-form .form-submit:hover,
+.c-btn.type-1.style-2.color-2:focus,
+.tt-comment-form .form-submit:focus {
+  color: #038e9e;
 }
 
 .c-btn.type-1.style-2.color-3 {
@@ -8025,6 +8036,7 @@ b {
   .tt-header .main-nav > ul > li:not(.mega) > ul {
     display: block !important;
     position: absolute;
+    font-weight: 400 !important;
     top: 100%;
     left: 0;
     width: 100%;
@@ -8062,6 +8074,7 @@ b {
   .tt-header .main-nav > ul > li:not(.mega) > ul > li > a {
     display: block;
     font-family: "Roboto";
+    font-weight: 400 !important;
     position: relative;
     font-size: 13px;
     line-height: 17px;
@@ -8084,14 +8097,22 @@ b {
     position: relative;
   }
 
+  .tt-header .main-nav > ul > li:not(.mega) > ul > li {
+    border-top: 2px solid #e0e0e0;
+  }
+  .tt-header .main-nav > ul > li:not(.mega) > ul > li:first-child {
+    border-top: 0;
+  }
+
   .tt-header .main-nav > ul > li:not(.mega) > ul > li > ul {
     display: block !important;
     position: absolute;
+    font-weight: 400 !important;
     top: -11px;
     left: 100%;
     width: 216px;
     padding: 10px 0;
-    background: white;
+    background: #dcf2f5;
     border: 1px solid #eaeaea;
     visibility: hidden;
     opacity: 0;
@@ -8128,18 +8149,25 @@ b {
     text-align: left;
   }
 
+  .tt-header .main-nav > ul > li:not(.mega) > ul > li > ul > li {
+    border-top: 2px solid #e0e0e0;
+  }
+  .tt-header .main-nav > ul > li:not(.mega) > ul > li > ul > li:first-child {
+    border-top: 0;
+  }
+
   .tt-header .main-nav > ul > li:not(.mega) > ul > li > ul > li > a {
     display: block;
     position: relative;
     font-size: 12px;
     line-height: 17px;
-    font-weight: 400;
+    font-weight: 400 !important;
     color: #666;
     padding: 9px 19px 9px 19px;
   }
 
   .tt-header .main-nav > ul > li:not(.mega) > ul > li > ul > li > a:hover {
-    background: #66b4de;
+    background: #54bfcf;
     color: white;
   }
 
@@ -8613,7 +8641,7 @@ b {
 .tt-s-popup-form {
   position: relative;
   width: 100%;
-  background: #111;
+  background: #038e9e;
   padding: 120px 63px 90px 63px;
 }
 
@@ -9730,7 +9758,7 @@ b {
 }
 
 .tt-post-title:hover {
-  color: #66b4de;
+  color: #003273;
 }
 
 .tt-post-label {
@@ -9738,7 +9766,7 @@ b {
   font-size: 14px;
   line-height: 1.43;
   font-weight: bold;
-  color: #505050;
+  color: #038e9e;
   margin-bottom: 11px;
 }
 
@@ -9951,7 +9979,7 @@ b {
   box-shadow: none;
 }
 .tt-post.type-3 .tt-post-label {
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .tt-post.type-3 .tt-post-info {
@@ -10239,11 +10267,6 @@ b {
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 /*  24 - TT-BORDER-BLOCK  */
 /* ------------------------------------------------------------------------------------------------------------------------------- */
-.border-yellow {
-  border-radius: 4px;
-  border: solid 6px #facd00;
-}
-
 .tt-border-block {
   border: 1px solid #eaeaea;
   padding: 30px;
@@ -10517,6 +10540,9 @@ b {
 
 .tt-footer-copy a {
   color: white;
+}
+.tt-footer-copy a:hover {
+  color: #003273;
 }
 
 .tt-footer.grey {
@@ -10820,7 +10846,7 @@ b {
 }
 
 .tt-blog-nav-title:hover {
-  color: #66b4de;
+  color: #003273;
 }
 
 .tt-blog-nav {
@@ -13132,7 +13158,7 @@ p.logged-in-as {
 
 .tt-comment-form .form-submit {
   display: inline-block;
-  padding: 7px 0;
+  padding: 8px 16px;
 }
 
 .logged-in .tt-comment-form textarea {
@@ -14655,7 +14681,7 @@ USE THAT ABOVE CSS CLASS, NEVER REPEAT ANY CSS CLASS OR CODE
   position: absolute;
   left: 0;
   bottom: 0;
-  background: #66b4de;
+  background: #003273;
   height: 4px;
   width: 0;
   transition: all 0.35s ease-out;
@@ -17872,6 +17898,111 @@ p.wp-block-coblocks-author__biography {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------
+* Buttons
+* -------------------------------------------------------------------------------------------------------------------*/
+.simple-text .btn,
+.btn {
+  font-family: Lato;
+  font-weight: bold;
+  letter-spacing: 0.45rem;
+  font-size: 1.8rem;
+  padding: 8px 16px;
+  text-align: center;
+  border-radius: 0;
+  border: 2px solid;
+}
+.simple-text .btn-primary,
+.btn-primary {
+  color: white;
+  background-color: #038e9e;
+  border-color: #038e9e;
+}
+.simple-text .btn-primary:hover,
+.btn-primary:hover {
+  color: #038e9e;
+  background-color: white;
+  border-color: #038e9e;
+}
+.simple-text .btn-primary:focus,
+.btn-primary:focus {
+  color: #038e9e;
+  background-color: white;
+  border-color: #038e9e;
+}
+.simple-text .btn-primary:active,
+.btn-primary:active {
+  color: #038e9e;
+  background-color: #dcf2f5;
+  border-color: #038e9e;
+}
+.simple-text .btn-primary:visited,
+.btn-primary:visited {
+  color: white;
+  background-color: #038e9e;
+  border-color: #038e9e;
+}
+.simple-text .btn-secondary,
+.btn-secondary {
+  color: #038e9e;
+  background-color: transparent;
+  border-color: #038e9e;
+}
+.simple-text .btn-secondary:hover,
+.btn-secondary:hover {
+  color: #038e9e;
+  background-color: #dcf2f5;
+  border-color: #038e9e;
+}
+.simple-text .btn-secondary:focus,
+.btn-secondary:focus {
+  color: #038e9e;
+  background-color: #dcf2f5;
+  border-color: #038e9e;
+}
+.simple-text .btn-secondary:active,
+.btn-secondary:active {
+  color: #038e9e;
+  background-color: #bae5eb;
+  border-color: #038e9e;
+}
+.simple-text .btn-secondary:visited,
+.btn-secondary:visited {
+  color: #038e9e;
+  background-color: transparent;
+  border-color: #038e9e;
+}
+.simple-text .btn-text-link,
+.btn-text-link {
+  color: #038e9e;
+  background-color: transparent;
+  border: 0;
+}
+.simple-text .btn-text-link:hover,
+.btn-text-link:hover {
+  color: #003273;
+  background-color: transparent;
+  border: 0;
+}
+.simple-text .btn-text-link:focus,
+.btn-text-link:focus {
+  color: #003273;
+  background-color: transparent;
+  border: 0;
+}
+.simple-text .btn-text-link:active,
+.btn-text-link:active {
+  color: #505050;
+  background-color: transparent;
+  border: 0;
+}
+.simple-text .btn-text-link:visited,
+.btn-text-link:visited {
+  color: #54bfcf;
+  background-color: transparent;
+  border: 0;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------
  * INFO BOXES
  * -------------------------------------------------------------------------------------------------------------------*/
 .info-box {
@@ -17916,6 +18047,22 @@ p.wp-block-coblocks-author__biography {
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------
+ * Link Box
+ * -------------------------------------------------------------------------------------------------------------------*/
+.link_box {
+  padding: 32px;
+}
+.link_box [class^=icon-], .link_box [class*=" icon-"], .link_box i {
+  font-style: normal;
+  font-weight: bold;
+  margin-right: 6px;
+}
+.link_box a {
+  margin: 6px 0;
+  font-weight: 900;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------
  * Background Colors
  * -------------------------------------------------------------------------------------------------------------------*/
 .bg-yellow {
@@ -17944,6 +18091,34 @@ p.wp-block-coblocks-author__biography {
 }
 .bg-aquamarin-20 h1 mark, .bg-aquamarin-20 h2 mark, .bg-aquamarin-20 h3 mark, .bg-aquamarin-20 h4 mark {
   color: #505050;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------
+ * Borders
+ * -------------------------------------------------------------------------------------------------------------------*/
+.border-yellow {
+  border-radius: 4px;
+  border: solid 6px #facd00;
+}
+.border-aquamarin-20 {
+  border-radius: 4px;
+  border: solid 6px #dcf2f5;
+}
+.border-red {
+  border-radius: 4px;
+  border: solid 6px #ac0000;
+}
+.border-darkblue {
+  border-radius: 4px;
+  border: solid 6px #003273;
+}
+
+.no-border, .no-border .wpb_wrapper {
+  border: none;
+}
+
+.no-border-radius {
+  border-radius: 0;
 }
 
 .icon-checklist li {
@@ -18130,14 +18305,6 @@ p.wp-block-coblocks-author__biography {
   .h6, .simple-text h6 {
     font-size: 1.8rem;
   }
-}
-
-.no-border, .no-border .wpb_wrapper {
-  border: none;
-}
-
-.no-border-radius {
-  border-radius: 0;
 }
 
 .margin-reset, .margin-reset .wpb_wrapper {

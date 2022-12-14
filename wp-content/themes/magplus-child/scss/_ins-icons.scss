@@ -1,0 +1,58 @@
+.icon {
+  &-checklist {
+    li {
+      padding-left: 2rem;
+      &:before {
+        content: "\e934"; /* Linearicons Unicode */
+        font-family: 'Linearicons';
+        display: inline-block;
+        margin-left: -2rem; /* same as padding-left set on li */
+        width: 2rem; /* same as padding-left set on li */
+        font-weight: 900;
+      }
+    }
+    &.lnr {
+      li {
+        padding-left: 2rem;
+        &:before {
+          content: "\e934"; /* Linearicons Unicode */
+          font-family: 'Linearicons';
+          display: inline-block;
+          margin-left: -2rem; /* same as padding-left set on li */
+          width: 2rem; /* same as padding-left set on li */
+          font-weight: 900;
+        }
+      }
+    }
+    &.fa {
+      li {
+        padding-left: 2rem;
+        &:before {
+          content: "\f00c"; /* FontAwesome Unicode */
+          font-family: FontAwesome;
+          display: inline-block;
+          margin-left: -2rem; /* same as padding-left set on li */
+          width: 2rem; /* same as padding-left set on li */
+        }
+      }
+    }
+  }
+
+  &-yellow {
+    li {
+      &:before {
+        color: $yellow;
+      }
+    }
+    .fa {
+      color: $yellow;
+      margin-right: 10px;
+    }
+  }
+  &-aquamarin-20 {
+    .fa {
+      color: $aquamarin-20;
+      margin-right: 10px;
+    }
+  }
+}

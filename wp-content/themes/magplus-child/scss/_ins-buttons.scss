@@ -1,0 +1,90 @@
+/* ---------------------------------------------------------------------------------------------------------------------
+* Buttons
+* -------------------------------------------------------------------------------------------------------------------*/
+.simple-text .btn,
+.btn {
+  font-family: Lato;
+  font-weight: bold;
+  letter-spacing: 0.45rem;
+  font-size: 1.8rem;
+  padding: 8px 16px;
+  text-align: center;
+  border-radius: 0;
+  border: 2px solid;
+  &-primary {
+    color: $white;
+    background-color: $aquamarin-dark;
+    border-color:  $aquamarin-dark;
+    &:hover {
+      color: $aquamarin-dark;
+      background-color: $white;
+      border-color:  $aquamarin-dark;
+    }
+    &:focus {
+      color: $aquamarin-dark;
+      background-color: $white;
+      border-color:  $aquamarin-dark;
+    }
+    &:active {
+      color: $aquamarin-dark;
+      background-color: $aquamarin-20;
+      border-color:  $aquamarin-dark;
+    }
+    &:visited {
+      color: $white;
+      background-color: $aquamarin-dark;
+      border-color:  $aquamarin-dark;
+    }
+  }
+  &-secondary {
+    color: $aquamarin-dark;
+    background-color: transparent;
+    border-color:  $aquamarin-dark;
+    &:hover {
+      color: $aquamarin-dark;
+      background-color: $aquamarin-20;
+      border-color:  $aquamarin-dark;
+    }
+    &:focus {
+      color: $aquamarin-dark;
+      background-color: $aquamarin-20;
+      border-color:  $aquamarin-dark;
+    }
+    &:active {
+      color: $aquamarin-dark;
+      background-color: $aquamarin-40;
+      border-color:  $aquamarin-dark;
+    }
+    &:visited {
+      color: $aquamarin-dark;
+      background-color: transparent;
+      border-color:  $aquamarin-dark;
+    }
+
+  }
+  &-text-link {
+    color: $aquamarin-dark;
+    background-color: transparent;
+    border:  0;
+    &:hover {
+      color: $darkblue;
+      background-color: transparent;
+      border:  0;
+    }
+    &:focus {
+      color: $darkblue;
+      background-color: transparent;
+      border:  0;
+    }
+    &:active {
+      color: $grey-dark;
+      background-color: transparent;
+      border:  0;
+    }
+    &:visited {
+      color: $aquamarin;
+      background-color: transparent;
+      border:  0;
+    }
+  }
+}

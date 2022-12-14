@@ -18,5 +18,5 @@
       <?php echo wp_kses_data(magplus_get_opt('footer-copyright-text')); ?>
     </div>
   </div>
-</div> 
+</div>
 
